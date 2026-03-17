@@ -9,21 +9,25 @@ const PEOPLE = [
     name: "Sarah Ahmed",
     title: "Senior Partner · Corporate",
     image: "/people/sarah-ahmed.jpg",
+    slug: "sarah-ahmed",
   },
   {
     name: "Omar Al Farsi",
     title: "Head of Litigation",
     image: "/people/omar-alfarsi.jpg",
+    slug: "omar-al-farsi",
   },
   {
     name: "Dr. Khalid Mansour",
     title: "Arbitration Specialist",
     image: "/people/khalid-mansour.jpg",
+    slug: "dr-khalid-mansour",
   },
   {
     name: "Leila Hassan",
     title: "Associate · Intellectual Property",
     image: "/people/leila-hassan.jpg",
+    slug: "leila-hassan",
   },
 ];
 
@@ -83,23 +87,25 @@ export default function OurPeople() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex flex-col"
             >
-              {/* Photo */}
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-200 mb-3 shadow-sm">
-                <Image
-                  src={person.image}
-                  alt={person.name}
-                  fill
-                  className="object-cover object-top"
-                  unoptimized
-                />
-                {/* Fallback placeholder */}
-                <div className="absolute inset-0 bg-slate-300 flex items-center justify-center text-slate-500 text-xs z-0">
-                  Photo
+              <Link href={`/people/${person.slug}`} className="group flex flex-col">
+                {/* Photo */}
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-200 mb-3 shadow-sm group-hover:shadow-md transition-shadow">
+                  <Image
+                    src={person.image}
+                    alt={person.name}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    unoptimized
+                  />
+                  {/* Fallback placeholder */}
+                  <div className="absolute inset-0 bg-slate-300 flex items-center justify-center text-slate-500 text-xs z-0">
+                    Photo
+                  </div>
                 </div>
-              </div>
-              {/* Info */}
-              <h3 className="text-[15px] font-bold text-[#0f172a]">{person.name}</h3>
-              <p className="text-[13px] text-[#1A7A43] font-medium mt-0.5">{person.title}</p>
+                {/* Info */}
+                <h3 className="text-[15px] font-bold text-[#0f172a] group-hover:text-[#1A7A43] transition-colors">{person.name}</h3>
+                <p className="text-[13px] text-[#1A7A43] font-medium mt-0.5">{person.title}</p>
+              </Link>
             </motion.div>
           ))}
         </div>

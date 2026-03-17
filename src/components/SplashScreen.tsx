@@ -6,10 +6,22 @@ import Image from "next/image";
 
 export default function SplashScreen({ duration = 5000 }: { duration?: number }) {
   const [svgContent, setSvgContent] = useState<string | null>(null);
+
+  // Start as mounted only if the splash hasn't been shown yet this session.
+  // We read sessionStorage directly in the initialiser so we never call setState inside an effect.
+  const [isMounted, setIsMounted] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false; // SSR safety
+    return !sessionStorage.getItem("splash_shown");
+  });
   const [isVisible, setIsVisible] = useState(true);
-  const [isMounted, setIsMounted] = useState(true);
 
   useEffect(() => {
+    // If we decided not to mount, bail out immediately
+    if (!isMounted) return;
+
+    // Mark seen so subsequent navigations skip the splash
+    sessionStorage.setItem("splash_shown", "1");
+
     // 1. Fetch the SVG file from the public folder
     fetch("/file.svg")
       .then((res) => res.text())
@@ -17,21 +29,20 @@ export default function SplashScreen({ duration = 5000 }: { duration?: number })
       .catch((err) => console.error("Failed to load Splash Screen SVG:", err));
 
     // 2. Timeline for Fade Out and Unmount
-    // The animation takes 1.5s (draw) + 0.8s (fill) = 2.3s
-    // Total wait time is duration, so we start fading out at duration and unmount shortly after
     const fadeTimer = setTimeout(() => {
       setIsVisible(false);
     }, duration);
 
     const unmountTimer = setTimeout(() => {
       setIsMounted(false);
-    }, duration + 500); // Unmount 500ms after fade starts
+    }, duration + 500);
 
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(unmountTimer);
     };
-  }, [duration]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // intentionally run once on mount only
 
   if (!isMounted) return null;
 

@@ -109,7 +109,7 @@ export default function FounderProfile() {
             {/* CTA Button */}
             <div>
               <Link 
-                href="/founder" 
+                href="/people/founder-al-zekry" 
                 className="inline-flex items-center justify-center gap-3 rounded-sm bg-[#0f172a] px-5 py-3 text-[13px] font-bold text-white transition-all hover:bg-[#1e293b] hover:shadow-md cursor-pointer group"
               >
                 View Full Profile

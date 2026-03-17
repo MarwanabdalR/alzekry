@@ -9,7 +9,7 @@ export default function Home() {
       <motion.div 
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, delay: 4.8, ease: "easeOut" }}
+        transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
         className="absolute inset-0 z-0 grayscale-50"
       >
         <video
@@ -29,7 +29,7 @@ export default function Home() {
         <motion.h1 
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 6.4, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="mx-auto max-w-5xl text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[90px] lg:leading-[1.1]"
         >
           Tradition of Excellence
@@ -38,7 +38,7 @@ export default function Home() {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 6.6, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-3xl text-lg sm:text-xl text-gray-200 font-light tracking-wide leading-relaxed"
         >
           Experience the pinnacle of legal expertise and dedication. Protecting your rights with integrity and unparalleled professional wisdom.
@@ -47,7 +47,7 @@ export default function Home() {
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 6.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
         >
           <a

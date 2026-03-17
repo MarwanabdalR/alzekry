@@ -3,38 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-const NEWS = [
-  {
-    tag: "REGULATORY",
-    date: "OCT 24, 2023",
-    title: "New Corporate Tax Regulations in the Region",
-    excerpt: "A detailed breakdown of the recent changes to corporate tax laws and how it affects local businesses.",
-    image: "/news/news-1.jpg",
-    href: "/news/corporate-tax-regulations",
-  },
-  {
-    tag: "EVENTS",
-    date: "OCT 15, 2023",
-    title: "Al Zekry Firm Hosts Annual Legal Symposium",
-    excerpt: "Join us for a discussion on the future of international arbitration and digital asset legislation.",
-    image: "/news/news-2.jpg",
-    href: "/news/annual-symposium",
-  },
-  {
-    tag: "INSIGHT",
-    date: "OCT 02, 2023",
-    title: "Protecting Intellectual Property in the AI Era",
-    excerpt: "How current laws are evolving to protect creators against generative AI content usage.",
-    image: "/news/news-3.jpg",
-    href: "/news/ip-in-ai-era",
-  },
-];
+import { NEWS_ARTICLES } from "@/lib/news";
 
 const TAG_COLORS: Record<string, string> = {
   REGULATORY: "text-[#1A7A43]",
   EVENTS: "text-[#1A7A43]",
   INSIGHT: "text-[#1A7A43]",
+  ANNOUNCEMENT: "text-amber-600",
 };
 
 export default function NewsUpdates() {
@@ -73,9 +48,9 @@ export default function NewsUpdates() {
 
         {/* News Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {NEWS.map((item, index) => (
+          {NEWS_ARTICLES.map((item, index) => (
             <motion.div
-              key={item.title}
+              key={item.slug}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -85,13 +60,12 @@ export default function NewsUpdates() {
               {/* Thumbnail */}
               <div className="relative w-full aspect-video bg-slate-200 overflow-hidden">
                 <Image
-                  src={item.image}
+                  src={item.heroImage}
                   alt={item.title}
                   fill
                   className="object-cover"
                   unoptimized
                 />
-                {/* Fallback bg */}
                 <div className="absolute inset-0 bg-slate-300 z-0" />
               </div>
 
@@ -108,10 +82,10 @@ export default function NewsUpdates() {
                   {item.title}
                 </h3>
                 <p className="text-[13px] text-[#64748b] leading-relaxed flex-1 mb-4">
-                  {item.excerpt}
+                  {item.excerptShort}
                 </p>
                 <Link
-                  href={item.href}
+                  href={`/news/${item.slug}`}
                   className="inline-flex items-center gap-1 text-[#1A7A43] text-[13px] font-semibold hover:underline"
                 >
                   Read More

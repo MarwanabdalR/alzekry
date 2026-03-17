@@ -1,47 +1,85 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<'firm' | 'expertise' | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
+  useEffect(() => {
+    if (!isHomePage) return;
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // Reset when navigating away
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHomePage]);
+
+  // Transparent only on the home page when not scrolled and menu is closed
+  const isTransparent = isHomePage && !scrolled && !mobileMenuOpen;
 
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, delay: 5.2, ease: "easeOut" }}
-      className="bg-white shadow-sm"
+      transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+      className={`${
+        isHomePage
+          ? `fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+              isTransparent ? "bg-transparent shadow-none" : "bg-white shadow-sm"
+            }`
+          : "relative bg-white shadow-sm"
+      }`}
     >
       <nav className="container mx-auto flex items-center justify-between p-4 lg:px-8" aria-label="Global">
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <div className="relative h-24 w-24 sm:h-16 sm:w-16">
-            <Image src="/logo.png" alt="Logo" fill className="object-contain" />
-          </div>
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
-            <div className="flex flex-col text-[#1e293b]">
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight">Al Zekry</h1>
+            <div className="relative h-24 w-24 sm:h-16 sm:w-16">
+              <Image src="/logo.png" alt="Logo" fill className="object-contain" />
+            </div>
+            <div className="flex flex-col">
+              <h1 className={`text-xl sm:text-2xl font-bold tracking-tight transition-colors ${
+                isTransparent ? "text-white" : "text-[#1e293b]"
+              }`}>Al Zekry</h1>
               <span className="text-[10px] sm:text-xs font-semibold text-[#1A7A43]">مؤسسة آل ذكري</span>
             </div>
           </Link>
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex lg:gap-x-10">
-          <Link href="/" className="text-[15px] font-semibold text-[#1e293b] hover:text-[#1A7A43] transition-colors">Home</Link>
-          <Link href="/founder" className="text-[15px] font-semibold text-[#475569] hover:text-[#1A7A43] transition-colors">Founder</Link>
-          <Link href="/practice-areas" className="text-[15px] font-semibold text-[#475569] hover:text-[#1A7A43] transition-colors">Practice Areas</Link>
-          <Link href="/people" className="text-[15px] font-semibold text-[#475569] hover:text-[#1A7A43] transition-colors">Our People</Link>
-          <Link href="/news" className="text-[15px] font-semibold text-[#475569] hover:text-[#1A7A43] transition-colors">News</Link>
+        <div className="hidden lg:flex lg:gap-x-8">
+          {[
+            { label: "Home", href: "/" },
+            { label: "Founder", href: "/people/founder-al-zekry" },
+            { label: "Our People", href: "/people" },
+            { label: "Values", href: "/values" },
+            { label: "Testimonials", href: "/testimonials" },
+            { label: "News", href: "/news" },
+          ].map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`text-[15px] font-semibold transition-colors hover:text-[#1A7A43] ${
+                isTransparent ? "text-white" : "text-[#475569]"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
         {/* Right side (Desktop) */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-6">
-          <button className="flex items-center gap-2 text-[#1e293b] hover:text-[#1A7A43] font-semibold text-[15px] transition-colors cursor-pointer">
+          <button className={`flex items-center gap-2 font-semibold text-[15px] transition-colors cursor-pointer hover:text-[#1A7A43] ${
+            isTransparent ? "text-white" : "text-[#1e293b]"
+          }`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -162,9 +200,6 @@ export default function Navbar() {
                     <Link href="/awards" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
                       Awards
                     </Link>
-                    <Link href="/careers" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Careers
-                    </Link>
                     <Link href="/news" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
                       News
                     </Link>
@@ -180,10 +215,10 @@ export default function Navbar() {
                     <Link href="/our-firm/who-we-are" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
                       Who We Are
                     </Link>
-                    <Link href="/our-firm/values-principles" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
+                    <Link href="/values" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
                       Values & Principles
                     </Link>
-                    <Link href="/our-firm/testimonials" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
+                    <Link href="/testimonials" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
                       Testimonials
                     </Link>
                   </>
@@ -197,9 +232,6 @@ export default function Navbar() {
                     </Link>
                     <Link href="/expertise/specializations" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
                       Specializations
-                    </Link>
-                    <Link href="/expertise/business-sectors" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Business Sectors
                     </Link>
                   </>
                 )}
