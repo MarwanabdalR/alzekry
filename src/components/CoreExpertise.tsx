@@ -94,7 +94,7 @@ export default function CoreExpertise() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 hover:bg-white/20 transition-colors duration-300 border border-white/20 rounded-lg aspect-square flex flex-col items-center justify-center p-6 text-center shadow-sm cursor-pointer"
+              className="bg-white/10 hover:bg-white/20 transition-colors duration-300 border border-white/20 rounded-lg  flex flex-col items-center justify-center p-6 text-center shadow-sm"
             >
               <div className="text-white mb-5 transition-transform duration-300 hover:scale-110">
                 {card.icon}

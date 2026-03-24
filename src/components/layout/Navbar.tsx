@@ -57,10 +57,10 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:gap-x-8">
           {[
             { label: "Home", href: "/" },
+            { label: "About Us", href: "/about" },
+            { label: "Expertise", href: "/expertise" },
             { label: "Founder", href: "/people/founder-al-zekry" },
             { label: "Our People", href: "/people" },
-            { label: "Values", href: "/values" },
-            { label: "Testimonials", href: "/testimonials" },
             { label: "News", href: "/news" },
           ].map((link) => (
             <Link
@@ -197,9 +197,6 @@ export default function Navbar() {
                     <Link href="/people" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
                       People
                     </Link>
-                    <Link href="/awards" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Awards
-                    </Link>
                     <Link href="/news" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
                       News
                     </Link>
@@ -227,11 +224,8 @@ export default function Navbar() {
                 {/* EXPERTISE SUBMENU */}
                 {activeSubmenu === 'expertise' && (
                   <>
-                    <Link href="/expertise/practice-areas" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Practice Areas
-                    </Link>
-                    <Link href="/expertise/specializations" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Specializations
+                    <Link href="/expertise" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#1A7A43]">
+                      Practice Areas & Awards
                     </Link>
                   </>
                 )}

@@ -83,7 +83,7 @@ export default function ContactPage() {
                 <div>
                   <p className="text-[12px] font-bold text-[#1A7A43] uppercase tracking-widest mb-1">Address</p>
                   <p className="text-[14px] text-[#475569] leading-relaxed">
-                    King Fahd Street, Al Muruj District, Riyadh,<br />Kingdom of Saudi Arabia
+                    22 Shooting Club Street, Dokki, in front of the main gate <br /> of the Shooting Club, third floor, Giza, Egypt
                   </p>
                 </div>
               </div>
@@ -97,8 +97,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-[12px] font-bold text-[#1A7A43] uppercase tracking-widest mb-1">Phone Numbers</p>
-                  <p className="text-[14px] text-[#475569]">+966 11 000 0000</p>
-                  <p className="text-[14px] text-[#475569]">+966 55 000 0000</p>
+                  <p className="text-[14px] text-[#475569]">+0237482360</p>
+                  <p className="text-[14px] text-[#475569]">+201151113878</p>
+                  <p className="text-[14px] text-[#475569]">+201117710976</p>
                 </div>
               </div>
 
@@ -122,7 +123,7 @@ export default function ContactPage() {
             {/* Google Maps Embed */}
             <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6749899793!2d46.6752!3d24.6877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQxJzE1LjciTiA0NsKwNDAnMzAuNyJF!5e0!3m2!1sen!2ssa!4v1234567890"
+                src="https://maps.google.com/maps?q=30.0428326,31.2023323&hl=en&z=17&output=embed"
                 width="100%"
                 height="220"
                 style={{ border: 0 }}
@@ -133,7 +134,7 @@ export default function ContactPage() {
               />
               <div className="px-5 py-3 border-t border-gray-100">
                 <Link
-                  href="https://maps.google.com"
+                  href="https://maps.google.com/?q=30.0428326,31.2023323"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[13px] text-[#1A7A43] font-semibold hover:underline inline-flex items-center gap-1"
@@ -153,6 +154,7 @@ export default function ContactPage() {
                 {[
                   {
                     label: "LinkedIn",
+                    href: "https://www.linkedin.com/company/al-zekry-law-firm/?viewAsMember=true",
                     icon: (
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" />
@@ -160,32 +162,30 @@ export default function ContactPage() {
                     ),
                   },
                   {
-                    label: "Website",
+                    label: "Facebook",
+                    href: "https://www.facebook.com/profile.php?id=100063503696585&mibextid=wwXIfr&rdid=i3gC8JC0IO0QKjdY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ETJt8bsNQ%2F%3Fmibextid%3DwwXIfr#",
                     icon: (
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" />
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                      </svg>
-                    ),
-                  },
-                  {
-                    label: "Twitter/X",
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M4 4l16 16M4 20L20 4" />
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                       </svg>
                     ),
                   },
                 ].map((social) => (
-                  <motion.button
+                  <Link
                     key={social.label}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#475569] hover:text-[#1A7A43] hover:border-[#1A7A43] transition-colors cursor-pointer"
-                    title={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    {social.icon}
-                  </motion.button>
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#475569] hover:text-[#1A7A43] hover:border-[#1A7A43] transition-colors cursor-pointer"
+                      title={social.label}
+                    >
+                      {social.icon}
+                    </motion.div>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -6,20 +6,18 @@ import Image from "next/image";
 
 export default function SplashScreen({ duration = 5000 }: { duration?: number }) {
   const [svgContent, setSvgContent] = useState<string | null>(null);
-
-  // Start as mounted only if the splash hasn't been shown yet this session.
-  // We read sessionStorage directly in the initialiser so we never call setState inside an effect.
-  const [isMounted, setIsMounted] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false; // SSR safety
-    return !sessionStorage.getItem("splash_shown");
-  });
+  const [isMounted, setIsMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // If we decided not to mount, bail out immediately
-    if (!isMounted) return;
+    // Only run on client after hydration
+    if (sessionStorage.getItem("splash_shown")) {
+      return;
+    }
 
-    // Mark seen so subsequent navigations skip the splash
+    // Now we can safely mount the splash screen
+    // eslint-disable-next-line
+    setIsMounted(true);
     sessionStorage.setItem("splash_shown", "1");
 
     // 1. Fetch the SVG file from the public folder
@@ -41,8 +39,7 @@ export default function SplashScreen({ duration = 5000 }: { duration?: number })
       clearTimeout(fadeTimer);
       clearTimeout(unmountTimer);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // intentionally run once on mount only
+  }, [duration]);
 
   if (!isMounted) return null;
 
