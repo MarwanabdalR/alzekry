@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -11,6 +11,9 @@ export default function Navbar() {
   const [activeSubmenu, setActiveSubmenu] = useState<'firm' | 'expertise' | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
+  const t = useTranslations("Navbar");
   const isHomePage = pathname === "/";
 
   useEffect(() => {
@@ -47,8 +50,8 @@ export default function Navbar() {
             <div className="flex flex-col">
               <h1 className={`text-xl sm:text-2xl font-bold tracking-tight transition-colors ${
                 isTransparent ? "text-white" : "text-[#1e293b]"
-              }`}>Al Zekry</h1>
-              <span className="text-[10px] sm:text-xs font-semibold text-[#1A7A43]">مؤسسة آل ذكري</span>
+              }`}>{t("logoTitle")}</h1>
+              <span className="text-[10px] sm:text-xs font-semibold text-[#1A7A43]">{t("logoSubtitle")}</span>
             </div>
           </Link>
         </div>
@@ -56,12 +59,13 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden lg:flex lg:gap-x-8">
           {[
-            { label: "Home", href: "/" },
-            { label: "About Us", href: "/about" },
-            { label: "Expertise", href: "/expertise" },
-            { label: "Founder", href: "/people/founder-al-zekry" },
-            { label: "Our People", href: "/people" },
-            { label: "News", href: "/news" },
+            { label: t("desktopLinks.home"), href: "/" },
+            { label: t("desktopLinks.aboutUs"), href: "/about" },
+            { label: t("desktopLinks.expertise"), href: "/expertise" },
+            { label: t("desktopLinks.founder"), href: "/people/founder-al-zekry" },
+            { label: t("desktopLinks.ourPeople"), href: "/people" },
+            { label: t("desktopLinks.news"), href: "/news" },
+            { label: t("desktopLinks.accreditations"), href: "/accreditations" },
           ].map((link) => (
             <Link
               key={link.href}
@@ -77,7 +81,9 @@ export default function Navbar() {
 
         {/* Right side (Desktop) */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-6">
-          <button className={`flex items-center gap-2 font-semibold text-[15px] transition-colors cursor-pointer hover:text-[#1A7A43] ${
+          <button 
+            onClick={() => router.replace(pathname || '/', { locale: locale === 'en' ? 'ar' : 'en' })}
+            className={`flex items-center gap-2 font-semibold text-[15px] transition-colors cursor-pointer hover:text-[#1A7A43] ${
             isTransparent ? "text-white" : "text-[#1e293b]"
           }`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -85,24 +91,36 @@ export default function Navbar() {
               <line x1="2" y1="12" x2="22" y2="12"></line>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
-            AR
+            {t("languageSwitcher")}
           </button>
           <Link href="/contact" className="bg-[#1A7A43] text-white px-6 py-2.5 rounded-md font-medium hover:bg-[#146336] transition-colors shadow-sm cursor-pointer border-transparent">
-            Contact Us
+            {t("contactBtn")}
           </Link>
         </div>
 
-        {/* Mobile menu toggle */}
-        <div className="flex lg:hidden">
+        {/* Mobile menu toggle & Language Switcher */}
+        <div className="flex items-center gap-5 lg:hidden">
+          <button 
+            onClick={() => router.replace(pathname || '/', { locale: locale === 'en' ? 'ar' : 'en' })}
+            className={`flex items-center gap-1.5 font-bold text-sm transition-colors cursor-pointer hover:text-[#1A7A43] ${
+            isTransparent ? "text-white" : "text-[#1e293b]"
+          }`}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>{t("languageSwitcher")}</span>
+          </button>
           <button
             type="button"
             className="-m-2.5 inline-flex flex-col items-end gap-1.5 justify-center rounded-md p-2.5 cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <span className="sr-only">Open main menu</span>
-            <div className={`h-0.5 w-8 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'bg-transparent' : 'bg-[#1e293b]'}`} />
-            <div className={`h-0.5 w-6 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'bg-transparent' : 'bg-[#1e293b]'}`} />
-            <div className={`h-0.5 w-8 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'bg-transparent' : 'bg-[#1e293b]'}`} />
+            <span className="sr-only">{t("sr.openMenu")}</span>
+            <div className={`h-0.5 w-8 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'bg-transparent' : isTransparent ? 'bg-white' : 'bg-[#1e293b]'}`} />
+            <div className={`h-0.5 w-6 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'bg-transparent' : isTransparent ? 'bg-white' : 'bg-[#1e293b]'}`} />
+            <div className={`h-0.5 w-8 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'bg-transparent' : isTransparent ? 'bg-white' : 'bg-[#1e293b]'}`} />
           </button>
         </div>
       </nav>
@@ -137,14 +155,14 @@ export default function Navbar() {
               {activeSubmenu ? (
                 <div className="flex items-center justify-between px-8 pt-8 pb-10">
                   <span className="text-sm tracking-[0.2em] text-zinc-800 uppercase font-medium">
-                    {activeSubmenu === 'firm' ? 'OUR FIRM' : activeSubmenu === 'expertise' ? 'EXPERTISE' : ''}
+                    {activeSubmenu === 'firm' ? t('mobile.headerOurFirm') : activeSubmenu === 'expertise' ? t('mobile.headerOurFirm') : ''}
                   </span>
                   <button
                     type="button"
                     className="-m-2.5 rounded-md p-2.5 text-zinc-500 hover:text-zinc-900 transition-colors cursor-pointer"
                     onClick={() => setActiveSubmenu(null)}
                   >
-                    <span className="sr-only">Go back</span>
+                    <span className="sr-only">{t("sr.goBack")}</span>
                     <svg className="h-6 w-6 stroke-[1.5px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
@@ -157,7 +175,7 @@ export default function Navbar() {
                     className="-m-2.5 rounded-md p-2.5 text-zinc-900 cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="sr-only">Close menu</span>
+                    <span className="sr-only">{t("sr.closeMenu")}</span>
                     <svg className="h-10 w-10 stroke-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -178,8 +196,8 @@ export default function Navbar() {
                       onClick={() => setActiveSubmenu('firm')}
                       className="flex w-full items-center justify-between text-left text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353] cursor-pointer "
                     >
-                      Our Firm
-                      <svg className="h-5 w-5 stroke-[1px] text-zinc-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      {t("mobile.ourFirm")}
+                      <svg className={`h-5 w-5 stroke-[1px] text-zinc-900 ${locale === 'ar' ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                       </svg>
                     </motion.button>
@@ -189,19 +207,19 @@ export default function Navbar() {
                       onClick={() => setActiveSubmenu('expertise')}
                       className="flex w-full items-center justify-between text-left text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353] cursor-pointer"
                     >
-                      Expertise
-                      <svg className="h-5 w-5 stroke-[1px] text-zinc-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      {t("mobile.expertise")}
+                      <svg className={`h-5 w-5 stroke-[1px] text-zinc-900 ${locale === 'ar' ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                       </svg>
                     </motion.button>
                     <Link href="/people" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      People
+                      {t("mobile.people")}
                     </Link>
                     <Link href="/news" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      News
+                      {t("mobile.news")}
                     </Link>
                     <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Contact
+                      {t("mobile.contact")}
                     </Link>
                   </>
                 )}
@@ -209,14 +227,17 @@ export default function Navbar() {
                 {/* OUR FIRM SUBMENU */}
                 {activeSubmenu === 'firm' && (
                   <>
-                    <Link href="/our-firm/who-we-are" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Who We Are
+                    <Link href="/about" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
+                      {t("mobile.whoWeAre")}
                     </Link>
                     <Link href="/values" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Values & Principles
+                      {t("mobile.values")}
                     </Link>
                     <Link href="/testimonials" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
-                      Testimonials
+                      {t("mobile.testimonials")}
+                    </Link>
+                    <Link href="/accreditations" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#09b353]">
+                      {t("mobile.accreditations")}
                     </Link>
                   </>
                 )}
@@ -225,7 +246,7 @@ export default function Navbar() {
                 {activeSubmenu === 'expertise' && (
                   <>
                     <Link href="/expertise" onClick={() => { setMobileMenuOpen(false); setActiveSubmenu(null); }} className="block text-[22px] font-light tracking-wide text-zinc-900 transition-colors hover:text-[#1A7A43]">
-                      Practice Areas & Awards
+                      {t("mobile.practiceAreas")}
                     </Link>
                   </>
                 )}

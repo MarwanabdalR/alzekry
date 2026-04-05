@@ -1,19 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
-
-const QUICK_LINKS = [
-  { label: "About the Firm", href: "/about" },
-  { label: "Legal Expertise", href: "/expertise" },
-  { label: "Our People", href: "/people" },
-  { label: "News", href: "/news" },
-  { label: "Values & Principles", href: "/values" },
-  { label: "Testimonials", href: "/testimonials" },
-  { label: "Contact Us", href: "/contact" },
+const QUICK_LINKS_KEYS = [
+  { key: "about", href: "/about" },
+  { key: "expertise", href: "/expertise" },
+  { key: "people", href: "/people" },
+  { key: "news", href: "/news" },
+  { key: "values", href: "/values" },
+  { key: "testimonials", href: "/testimonials" },
+  { key: "contact", href: "/contact" },
 ];
 
 
@@ -27,6 +28,8 @@ const colVariants = {
 };
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-[#0f1a0f] text-white">
       {/* Main Footer Content */}
@@ -48,13 +51,13 @@ export default function Footer() {
                 <Image src="/logo.png" alt="Logo" width={50} height={50} />
               </div>
               <div>
-                <h2 className="text-lg font-bold leading-none tracking-tight">Al Zekry</h2>
-                <span className="text-[11px] text-[#1A7A43] font-medium">مؤسسة آل ذكري</span>
+                <h2 className="text-lg font-bold leading-none tracking-tight">{t("logoTitle")}</h2>
+                <span className="text-[11px] text-[#1A7A43] font-medium">{t("logoSubtitle")}</span>
               </div>
             </div>
 
             <p className="text-[#94a3b8] text-[13px] leading-relaxed">
-              A legacy of legal excellence serving individuals and corporations with integrity for over three decades.
+              {t("description")}
             </p>
 
             {/* Social Icons */}
@@ -82,21 +85,21 @@ export default function Footer() {
             variants={colVariants}
             className="flex flex-col gap-5"
           >
-            <h3 className="text-[15px] font-bold tracking-wide">Quick Links</h3>
+            <h3 className="text-[15px] font-bold tracking-wide">{t("quickLinksTitle")}</h3>
             <ul className="flex flex-col gap-3.5">
-              {QUICK_LINKS.map((link, i) => (
+              {QUICK_LINKS_KEYS.map((link, i) => (
                 <motion.li
-                  key={link.label}
+                  key={link.key}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.07 }}
                 >
                   <Link
-                    href={link.href}
+                    href={link.href as any}
                     className="text-[#94a3b8] text-[14px] hover:text-white transition-colors"
                   >
-                    {link.label}
+                    {t(`links.${link.key as any}`)}
                   </Link>
                 </motion.li>
               ))}
@@ -112,7 +115,7 @@ export default function Footer() {
             variants={colVariants}
             className="flex flex-col gap-5"
           >
-            <h3 className="text-[15px] font-bold tracking-wide">Contact Us</h3>
+            <h3 className="text-[15px] font-bold tracking-wide">{t("contactUsTitle")}</h3>
             <ul className="flex flex-col gap-5">
               <li className="flex items-start gap-3">
                 <span className="text-[#1A7A43] mt-0.5 shrink-0">
@@ -122,8 +125,8 @@ export default function Footer() {
                   </svg>
                 </span>
                 <span className="text-[#94a3b8] text-[13px] leading-relaxed">
-                  <p className="text-[14px] text-[#475569] leading-relaxed">
-                    22 Shooting Club Street, Dokki, in front of the main gate <br /> of the Shooting Club, third floor, Giza, Egypt
+                  <p className="text-[14px] text-[#94a3b8] leading-relaxed">
+                    {t.rich("address", { br: () => <br /> })}
                   </p>
                 </span>
               </li>
@@ -143,10 +146,10 @@ export default function Footer() {
                   </svg>
                 </span>
                 <a
-                  href="mailto:contact@alzekry.com"
+                  href="mailto:alzekrylawfirm@gmail.com"
                   className="text-[#94a3b8] text-[13px] hover:text-white transition-colors"
                 >
-                  contact@alzekry.com
+                  alzekrylawfirm@gmail.com
                 </a>
               </li>
             </ul>
@@ -164,7 +167,7 @@ export default function Footer() {
       >
         <div className="container mx-auto max-w-7xl px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-center gap-4">
           <p className="text-[#475569] text-[12px]">
-            © 2023 Al Zekry Law Firm. All rights reserved.
+            {t("copyright")}
           </p>
         </div>
       </motion.div>

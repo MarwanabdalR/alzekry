@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import BalanceIcon from "./layout/BalanceIcon";
 
 const EXPERTISE_DATA = [
   {

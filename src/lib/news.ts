@@ -1,5 +1,5 @@
 // src/lib/news.ts
-// Central data store for all news articles and events
+// Central data store for all news articles and events – updated with real firm data
 
 export type NewsTag = "REGULATORY" | "EVENTS" | "INSIGHT" | "ANNOUNCEMENT";
 
@@ -20,13 +20,12 @@ export type NewsArticle = {
   tag: NewsTag;
   date: string;
   title: string;
-  excerptShort: string; // used in cards
+  excerptShort: string;
   heroImage: string;
-  body: string[]; // lead paragraphs
-  learnings?: string[]; // bullet list "What will you learn?"
+  body: string[];
+  learnings?: string[];
   agenda?: AgendaItem[];
   speakers?: Speaker[];
-  // Event-specific sidebar fields
   eventDate?: string;
   eventTime?: string;
   eventLocation?: string;
@@ -37,98 +36,155 @@ export type NewsArticle = {
 
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
-    slug: "corporate-tax-regulations",
-    tag: "REGULATORY",
-    date: "OCT 24, 2023",
-    title: "New Corporate Tax Regulations in the Region",
+    slug: "honors-for-excellence-family-law",
+    tag: "ANNOUNCEMENT",
+    date: "MAR 01, 2024",
+    title: "Al Zekry Firm Receives Honor for Excellence in Family Law",
     excerptShort:
-      "A detailed breakdown of the recent changes to corporate tax laws and how it affects local businesses.",
+      "The Egyptian Lawyers Syndicate formally honored the firm for its outstanding efforts in complex family law cases.",
     heroImage: "/news/news-1.jpg",
     body: [
-      "The GCC region has seen a sweeping shift in corporate taxation policy in 2023, with Saudi Arabia leading the charge through its updated zakat and tax framework. The changes affect both domestic and foreign-owned businesses operating within the Kingdom.",
-      "Key amendments include revisions to transfer pricing documentation requirements, new thin capitalization rules, and updated withholding tax obligations for cross-border service payments. Businesses have until Q1 2024 to align their internal structures accordingly.",
+      "Al Zekry Law Firm is proud to announce that it has received an official honor from the Egyptian Lawyers Syndicate in recognition of its effective and outstanding efforts in handling complex family law cases, including custody, alimony, divorce, and personal status matters.",
+      "The firm's dedicated family law practice, led by Consultant Dr. Ahmed Mohamed Zekry, has consistently achieved results that protect the rights and dignity of clients across all stages of litigation — from initial negotiations to final court rulings.",
     ],
     learnings: [
-      "Understand the scope of the new thin capitalization rules and their impact on financing structures.",
-      "Prepare compliant transfer pricing documentation for intercompany transactions.",
-      "Identify new withholding tax triggers at borders and how to minimize exposure.",
-      "Learn how VAT integration with zakat filings affects your reporting calendar.",
+      "Al Zekry's family law team specializes in divorce, Khul', custody, and alimony proceedings.",
+      "The firm represents clients in all Egyptian personal status courts and appeals courts.",
+      "Our approach combines judicial experience with a deep sensitivity to the human dimensions of family disputes.",
     ],
   },
   {
-    slug: "annual-symposium",
-    tag: "EVENTS",
-    date: "OCT 15, 2023",
-    title: "Al Zekry Firm Hosts Annual Legal Symposium",
+    slug: "honors-real-estate-registry",
+    tag: "ANNOUNCEMENT",
+    date: "FEB 10, 2024",
+    title: "Recognition from the Real Estate Registry Office for Property Cases",
     excerptShort:
-      "Join us for a discussion on the future of international arbitration and digital asset legislation.",
+      "The firm was honored by the Real Estate Registry Office for its role in resolving significant real estate and property disputes.",
     heroImage: "/news/news-2.jpg",
     body: [
-      "Al Zekry Law Firm is proud to host its Annual Legal Symposium, gathering leading minds in international arbitration, corporate governance, and digital law. The event is exclusively open to senior legal counsels, board members, and C-suite executives of regional enterprises.",
-      "This year's theme — 'Governance in the Age of Innovation' — reflects the growing need for companies to align their legal frameworks with rapidly evolving digital regulations in the GCC.",
+      "Al Zekry Law Firm has been formally recognized by the Real Estate Registry Office for its pivotal role in resolving complex real estate registration disputes and property litigation cases across Egypt.",
+      "The firm's expertise in navigating Egypt's property registration framework — including title disputes, inheritance-related property division, and contract enforcement — has made it a trusted partner for both individual property owners and corporate developers.",
     ],
     learnings: [
-      "Gain exclusive insight into new arbitration procedures under recent GCC legislative updates.",
-      "Access compliant frameworks for ESG reporting for listed companies.",
-      "Understand the legal landscape around digital assets and crypto regulation.",
-      "Network with senior legal experts across the Middle East and North Africa.",
+      "Al Zekry handles all aspects of real estate litigation, from registry disputes to construction contract enforcement.",
+      "The firm advises on property acquisition, due diligence, and dispute resolution for developers and investors.",
+      "Recognition from official government bodies reflects the firm's standing within Egypt's legal ecosystem.",
+    ],
+  },
+  {
+    slug: "international-contract-drafting-training",
+    tag: "INSIGHT",
+    date: "JAN 20, 2024",
+    title: "Firm Consultants Complete Advanced Training in International Contract Drafting",
+    excerptShort:
+      "Al Zekry consultants completed a specialized training program in international contract drafting at the American University.",
+    heroImage: "/news/news-3.jpg",
+    body: [
+      "In a continued commitment to professional excellence and international best practices, consultants from Al Zekry Law Firm successfully completed an advanced training program in International Contract Drafting at the American University.",
+      "The training covered cross-border commercial agreements, arbitration clauses, force majeure provisions, and international enforcement of contracts under Egyptian and international law frameworks.",
+      "This investment in professional development reinforces the firm's ability to serve clients with international business interests and cross-border commercial transactions.",
+    ],
+    learnings: [
+      "International contract drafting — covering CISG, ICC rules, and Egyptian Commercial Code provisions.",
+      "Arbitration clause design and enforcement strategies under New York Convention rules.",
+      "Force majeure and hardship provisions in post-pandemic commercial contracts.",
+      "Cross-border enforcement of judgments and arbitral awards in Egypt.",
+    ],
+  },
+  {
+    slug: "ip-diploma-completion",
+    tag: "INSIGHT",
+    date: "DEC 05, 2023",
+    title: "Consultants Earn Diploma in Intellectual Property Law",
+    excerptShort:
+      "Members of the firm have earned a specialized Diploma in Intellectual Property, strengthening the firm's IP practice.",
+    heroImage: "/news/news-1.jpg",
+    body: [
+      "Al Zekry Law Firm is pleased to announce that key consultants have successfully obtained a Diploma in Intellectual Property Law, further strengthening the firm's capacity to handle trademark registration, IP rights enforcement, and anti-counterfeiting cases.",
+      "The diploma program, conducted through a recognized Egyptian legal education institution, covered trademark law, copyright protection, patent registration, and digital IP rights under both Egyptian and international frameworks.",
+      "Consultant Hassan Mohamed Zekry, who leads the firm's IP practice, brings expertise that spans trademark registration enforcement, anti-fraud investigations, and commercial crime defense — all now further enriched by this formal qualification.",
+    ],
+    learnings: [
+      "Trademark registration procedures in Egypt under Law No. 82 of 2002.",
+      "Enforcement mechanisms for IP rights — from administrative complaints to criminal prosecution.",
+      "Digital IP challenges: protecting rights in online environments and AI-generated content.",
+      "Anti-counterfeiting investigations and coordination with Consumer Protection authorities.",
+    ],
+  },
+  {
+    slug: "annual-legal-symposium-2024",
+    tag: "EVENTS",
+    date: "NOV 10, 2023",
+    title: "Al Zekry Firm Hosts Annual Legal Symposium — Giza 2024",
+    excerptShort:
+      "Join us for a legal symposium on arbitration, consumer protection, and company formation under Egyptian law.",
+    heroImage: "/news/news-2.jpg",
+    body: [
+      "Al Zekry Law Firm for Law, Mediation, and Arbitration is proud to host its Annual Legal Symposium in Giza, bringing together legal professionals, business executives, and government officials for a focused discussion on Egypt's evolving legal landscape.",
+      "This year's symposium will cover three core themes: the latest developments in Egyptian arbitration law, consumer protection enforcement, and the new company formation procedures under Egyptian law.",
+    ],
+    learnings: [
+      "Recent reforms to Egypt's Arbitration Law No. 27 of 1994 and their practical implications.",
+      "Consumer Protection Agency (CPA) enforcement priorities and how businesses can stay compliant.",
+      "Step-by-step guide to forming companies under the Egyptian Investment Law and Companies Law.",
+      "Practical strategies for resolving commercial disputes out of court through mediation.",
     ],
     agenda: [
       {
         time: "09:00 – 10:30 AM",
-        session: "Session 1: Recent Legislative Updates",
+        session: "Session 1: Egyptian Arbitration Law Updates",
         description:
-          "An in-depth review of the most significant legal changes affecting regional businesses in 2023.",
+          "An in-depth review of recent reforms and landmark arbitral awards impacting commercial parties in Egypt.",
       },
       {
         time: "11:00 – 12:30 PM",
-        session: "Session 2: Risk Management & Compliance",
+        session: "Session 2: Consumer Protection & Commercial Fraud",
         description:
-          "Tools and strategies for navigating regulatory risk and ensuring operational legal compliance.",
+          "How businesses can ensure compliance with Egypt's Consumer Protection Law and avoid regulatory penalties.",
       },
       {
         time: "02:00 – 03:30 PM",
-        session: "Session 3: Digital Assets & IP in the Digital Age",
+        session: "Session 3: Company Formation & Corporate Governance",
         description:
-          "How to protect your firm's intellectual property in an increasingly AI-driven global market.",
+          "Practical guidance on forming all company types under Egyptian law, including licensing, partnerships, and JSCs.",
       },
     ],
     speakers: [
       {
-        name: "Counselor Al Zekry",
-        role: "Founding Partner",
+        name: "Consultant Mohamed Zekry",
+        role: "Founder & Head of the Firm",
         image: "/people/founder.jpg",
       },
       {
-        name: "Dr. Khalid Mansour",
-        role: "Arbitration Specialist",
-        image: "/people/khalid-mansour.jpg",
+        name: "Consultant Ali Mohamed Zekry",
+        role: "Senior Consultant · Corporate & Consumer Law",
+        image: "/people/ali-zekry.jpg",
       },
     ],
-    eventDate: "OCT 15, 2024",
+    eventDate: "MAR 15, 2024",
     eventTime: "09:00 AM – 04:00 PM",
-    eventLocation: "The Address Hotel, Dubai DIFC",
-    eventPrice: "500 AED",
-    contactEmail: "events@alzekry.com",
-    contactPhone: "+000 000 000 4 971",
+    eventLocation: "Al Zekry Law Firm – Dokki, Giza, Egypt",
+    eventPrice: "Free",
+    contactEmail: "alzekrylawfirm@gmail.com",
+    contactPhone: "+20 237 482 360",
   },
   {
-    slug: "ip-in-ai-era",
-    tag: "INSIGHT",
-    date: "OCT 02, 2023",
-    title: "Protecting Intellectual Property in the AI Era",
+    slug: "consumer-protection-law-changes",
+    tag: "REGULATORY",
+    date: "OCT 05, 2023",
+    title: "Key Updates to Egypt's Consumer Protection Law",
     excerptShort:
-      "How current laws are evolving to protect creators against generative AI content usage.",
+      "A detailed breakdown of the recent enforcement changes and how they affect businesses operating in Egypt.",
     heroImage: "/news/news-3.jpg",
     body: [
-      "Artificial intelligence has fundamentally disrupted the intellectual property landscape. From AI-generated artwork to code written by large language models, the question of ownership and authorship is no longer theoretical — it is being litigated in courts worldwide.",
-      "Saudi Arabia and the UAE are actively reviewing their IP statutes to address AI-generated works, with draft regulations expected by mid-2024. Leila Hassan, Al Zekry's IP specialist, outlines the key risks and strategic protections businesses should implement today.",
+      "Egypt's Consumer Protection Authority (CPA) has issued new enforcement guidelines affecting businesses across retail, automotive, and digital services sectors. The changes impose stricter documentation requirements and accelerated complaint-response timelines.",
+      "Consultant Ali Mohamed Zekry, former Deputy Director of the Car Complaints Department at the CPA, breaks down what these changes mean for businesses and how to ensure full compliance.",
     ],
     learnings: [
-      "Understand the current legal status of AI-generated content under GCC and international copyright law.",
-      "Identify ownership risks when using AI tools for creative or technical outputs.",
-      "Learn how to structure IP agreements with AI vendors to preserve your rights.",
-      "Discover proactive registration strategies to protect human-authored works from AI misappropriation.",
+      "Understanding the scope of the new consumer complaint response requirements.",
+      "How the CPA's enforcement priorities have shifted toward e-commerce and digital services.",
+      "Documentation companies must maintain to defend against consumer protection claims.",
+      "How commercial fraud investigations are initiated and how businesses can respond.",
     ],
   },
 ];

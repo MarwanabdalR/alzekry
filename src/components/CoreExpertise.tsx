@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const EXPERTISE_CARDS = [
   {
-    title: "Litigation",
+    key: "litigation",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="m14 13-7.5 7.5c-.8.8-2.2.8-3 0-1.1-1.1-1.1-2.6 0-3.6L11 9.5" />
@@ -18,7 +20,7 @@ const EXPERTISE_CARDS = [
     ),
   },
   {
-    title: "Corporate Law",
+    key: "corporate",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
@@ -36,7 +38,7 @@ const EXPERTISE_CARDS = [
     ),
   },
   {
-    title: "Finance",
+    key: "finance",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M2 22h20" />
@@ -49,7 +51,7 @@ const EXPERTISE_CARDS = [
     ),
   },
   {
-    title: "Criminal Defense",
+    key: "criminal",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
@@ -59,6 +61,8 @@ const EXPERTISE_CARDS = [
 ];
 
 export default function CoreExpertise() {
+  const t = useTranslations("CoreExpertise");
+
   return (
     <section className="bg-[#1A7A43] py-20 px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl flex flex-col items-center">
@@ -72,7 +76,7 @@ export default function CoreExpertise() {
             transition={{ duration: 0.6 }}
             className="text-white text-3xl sm:text-4xl font-bold mb-4 font-sans"
           >
-            Core Expertise
+            {t("title")}
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -81,7 +85,7 @@ export default function CoreExpertise() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-white/80 text-[15px] sm:text-base font-light leading-relaxed"
           >
-            Our multi-disciplinary team provides comprehensive legal coverage across diverse sectors.
+            {t("description")}
           </motion.p>
         </div>
 
@@ -89,7 +93,7 @@ export default function CoreExpertise() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-12">
           {EXPERTISE_CARDS.map((card, index) => (
             <motion.div
-              key={card.title}
+              key={card.key}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -100,7 +104,7 @@ export default function CoreExpertise() {
                 {card.icon}
               </div>
               <h3 className="text-white text-[17px] font-semibold tracking-wide">
-                {card.title}
+                {t(`cards.${card.key as any}`)}
               </h3>
             </motion.div>
           ))}
@@ -117,7 +121,7 @@ export default function CoreExpertise() {
             href="/expertise"
             className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3.5 text-sm font-bold text-[#1A7A43] shadow-sm hover:bg-gray-100 transition-colors"
           >
-            See All Expertise
+            {t("seeAllBtn")}
           </Link>
         </motion.div>
 

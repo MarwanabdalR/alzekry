@@ -1,0 +1,1050 @@
+{
+  "Navbar": {
+    "logoTitle": "Al Zekry",
+    "logoSubtitle": "مؤسسة آل ذكري",
+    "desktopLinks": {
+      "home": "Home",
+      "aboutUs": "About Us",
+      "expertise": "Expertise",
+      "founder": "Founder",
+      "ourPeople": "Our People",
+      "news": "News",
+      "accreditations": "Accreditations"
+    },
+    "contactBtn": "Contact Us",
+    "languageSwitcher": "AR",
+    "sr": {
+      "openMenu": "Open main menu",
+      "closeMenu": "Close menu",
+      "goBack": "Go back"
+    },
+    "mobile": {
+      "headerOurFirm": "OUR FIRM",
+      "headerExpertise": "EXPERTISE",
+      "ourFirm": "Our Firm",
+      "expertise": "Expertise",
+      "people": "People",
+      "news": "News",
+      "contact": "Contact",
+      "whoWeAre": "Who We Are",
+      "values": "Values & Principles",
+      "testimonials": "Testimonials",
+      "practiceAreas": "Practice Areas & Awards",
+      "accreditations": "Accreditations"
+    }
+  },
+  "Accreditations": {
+    "badge": "Recognized Legal Pride",
+    "title": "Professional Accreditations & Certificates",
+    "subtitle": "At Al Zekry Law Firm, we are committed to the highest standards of quality and professionalism. Our accreditations reflect our firm commitment to legal excellence and providing services that comply with international and local standards.",
+    "cards": {
+      "c1": {
+        "title": "License to Practice",
+        "description": "Official license from the Ministry of Justice to provide all legal and administrative services."
+      },
+      "c2": {
+        "title": "ISO 9001:2015",
+        "description": "Global Quality Management System Certificate. This certificate confirms the firm's ability to consistently provide legal services that meet client and regulatory requirements."
+      },
+      "c3": {
+        "title": "Partners of Success",
+        "description": "Building sustainable legal and institutional partnerships."
+      },
+      "c4": {
+        "title": "Security & Information Reliability",
+        "description": "A trusted technical infrastructure for personal data protection based on the highest data security standards."
+      },
+      "c5": {
+        "title": "Legal Excellence Award",
+        "description": "Certificate of legal entrepreneurship from quality and legal excellence evaluation authorities."
+      }
+    },
+    "record": {
+      "title": "Record of Achievements",
+      "subtitle": "Browse the most prominent licenses and certificates obtained periodically as evidence of our sustainable effort."
+    },
+    "cta": {
+      "title": "Your Trust is Our Highest Goal",
+      "subtitle": "We are not satisfied with certificates alone, but always strive to translate these accreditations into excellent results and legal guarantees that serve our clients' interests.",
+      "btn": "Communicate with a Legal Advisor"
+    }
+  },
+  "Footer": {
+    "quickLinksTitle": "Quick Links",
+    "contactUsTitle": "Contact Us",
+    "logoTitle": "Al Zekry",
+    "logoSubtitle": "مؤسسة آل ذكري",
+    "description": "A legacy of legal excellence serving individuals and corporations with integrity for over three decades.",
+    "links": {
+      "about": "About the Firm",
+      "expertise": "Legal Expertise",
+      "people": "Our People",
+      "news": "News",
+      "values": "Values & Principles",
+      "testimonials": "Testimonials",
+      "contact": "Contact Us"
+    },
+    "address": "22 Shooting Club Street, Dokki,<br></br>Third Floor, Giza, Egypt",
+    "copyright": "© 2023 Al Zekry Law Firm. All rights reserved."
+  },
+  "Home": {
+    "title": "Experience, Commitment & Trusted Results",
+    "description": "",
+    "exploreBtn": "Explore Our Expertise",
+    "consultationBtn": "Consultation"
+  },
+  "FounderProfile": {
+    "subtitle": "FOUNDER PROFILE",
+    "name": "Chencoller Mohamed Zekry",
+    "role": "Founder & Head of the Firm",
+    "p1": "Chencoller Mohamed Zekry is a former President of the Cairo Economic Court and former Head of the Cassation Prosecution in the State of Kuwait. He is the founder and head of Al Zekry Law Firm for Law, Mediation, and Arbitration — Egypt's House of Expertise.",
+    "p2": "With decades of distinguished judicial service, his unparalleled experience provides the firm with deep institutional knowledge, enabling precise and expedient legal strategies for individuals and corporations alike.",
+    "stats": {
+      "years": "YEARS EXP",
+      "cases": "CASES WON",
+      "awards": "AWARDS"
+    },
+    "viewProfileBtn": "View Full Profile"
+  },
+  "CoreExpertise": {
+    "title": "Core Expertise",
+    "description": "Our multi-disciplinary team provides comprehensive legal coverage across diverse sectors.",
+    "cards": {
+      "litigation": "Litigation",
+      "corporate": "Corporate Law",
+      "finance": "Finance",
+      "criminal": "Criminal Defense"
+    },
+    "seeAllBtn": "See All Expertise"
+  },
+  "PracticeAreas": {
+    "title": "Practice Area Details",
+    "areas": {
+      "criminal": {
+        "category": "Criminal Law & Misdemeanors",
+        "services": [
+          "Defense and representation before investigative authorities"
+        ]
+      },
+      "civil": {
+        "category": "Civil Law",
+        "services": [
+          "Civil disputes",
+          "Compensation and tort liability",
+          "Contracts and obligations"
+        ]
+      },
+      "personal": {
+        "category": "Personal Status Law",
+        "services": [
+          "Family law",
+          "Alimony, custody, and visitation",
+          "Divorce and Khula"
+        ]
+      },
+      "corporate": {
+        "category": "Corporate Law & Formation",
+        "services": [
+          "Incorporation of all company types",
+          "Drafting Articles of Association and Partnership Agreements",
+          "Corporate restructuring and legal compliance"
+        ]
+      },
+      "consumer": {
+        "category": "Consumer Protection & Commercial Fraud",
+        "services": [
+          "Consumer protection cases",
+          "Commercial complaints and violations",
+          "Legal representation before competent authorities"
+        ]
+      },
+      "ip": {
+        "category": "Intellectual Property",
+        "services": [
+          "Trademark registration",
+          "Protection of IP rights",
+          "IP infringement disputes"
+        ]
+      }
+    }
+  },
+  "OurPeople": {
+    "title": "Our People",
+    "subtitle": "Meet the legal minds dedicated to your success.",
+    "viewAllBtn": "View All Partners",
+    "photoFallback": "Photo",
+    "members": {
+      "ali": {
+        "name": " Ali Mohamed Zekry",
+        "title": "Senior  · Corporate & Consumer Law"
+      },
+      "hassan": {
+        "name": " Hassan Mohamed Zekry",
+        "title": " · Consumer Protection & Trademark"
+      },
+      "ahmed": {
+        "name": " Dr. Ahmed Mohamed Zekry",
+        "title": " · Civil, Commercial & Family Law"
+      },
+      "omar": {
+        "name": " Omar Alzekry",
+        "title": "Legal  · Criminal Law"
+      }
+    }
+  },
+  "NewsUpdates": {
+    "title": "News & Legal Updates",
+    "seeAllBtn": "See All News",
+    "readMoreBtn": "Read More",
+    "items": {
+      "honors-for-excellence-family-law": {
+        "tag": "ANNOUNCEMENT",
+        "date": "MAR 01, 2024",
+        "title": "Al Zekry Firm Receives Honor for Excellence in Family Law",
+        "excerptShort": "The Egyptian Lawyers Syndicate formally honored the firm for its outstanding efforts in complex family law cases."
+      },
+      "honors-real-estate-registry": {
+        "tag": "ANNOUNCEMENT",
+        "date": "FEB 10, 2024",
+        "title": "Recognition from the Real Estate Registry Office for Property Cases",
+        "excerptShort": "The firm was honored by the Real Estate Registry Office for its role in resolving significant real estate and property disputes."
+      },
+      "international-contract-drafting-training": {
+        "tag": "INSIGHT",
+        "date": "JAN 20, 2024",
+        "title": "Firm Consultants Complete Advanced Training in International Contract Drafting",
+        "excerptShort": "Al Zekry consultants completed a specialized training program in international contract drafting at the American University."
+      },
+      "ip-diploma-completion": {
+        "tag": "INSIGHT",
+        "date": "DEC 05, 2023",
+        "title": "Consultants Earn Diploma in Intellectual Property Law",
+        "excerptShort": "Members of the firm have earned a specialized Diploma in Intellectual Property, strengthening the firm's IP practice."
+      },
+      "annual-legal-symposium-2024": {
+        "tag": "EVENTS",
+        "date": "NOV 10, 2023",
+        "title": "Al Zekry Firm Hosts Annual Legal Symposium — Giza 2024",
+        "excerptShort": "Join us for a legal symposium on arbitration, consumer protection, and company formation under Egyptian law."
+      },
+      "consumer-protection-law-changes": {
+        "tag": "REGULATORY",
+        "date": "OCT 05, 2023",
+        "title": "Key Updates to Egypt's Consumer Protection Law",
+        "excerptShort": "A detailed breakdown of the recent enforcement changes and how they affect businesses operating in Egypt."
+      }
+    }
+  },
+  "AboutUs": {
+    "hero": {
+      "title": "A Legacy of Justice and Integrity",
+      "subtitle": "We believe the law is the cornerstone of a stable society. Al Zekry Law Firm — Egypt's House of Expertise — is dedicated to protecting our clients' rights with integrity and judicial precision."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide integrated, high-level legal and Sharia services for individuals and companies, leveraging deep judicial expertise to ensure a precise understanding of court procedures and rulings — protecting our clients' rights at the highest standards of professionalism and transparency."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be Egypt's most trusted legal authority — the first choice for individuals and corporations seeking rigorous, judicially-informed legal representation that expedites complex government procedures and delivers real results."
+    },
+    "timeline": {
+      "title": "Our Journey Through Time",
+      "items": {
+        "item0": {
+          "year": "2010",
+          "title": "Foundation of Al Zekry Law Firm",
+          "description": "Established the firm in Giza, Egypt under the leadership of Chencoller Mohamed Zekry, former President of the Cairo Economic Court, with a focus on criminal defense, corporate law, and dispute resolution."
+        },
+        "item1": {
+          "year": "2015",
+          "title": "Expansion into International Arbitration",
+          "description": "Launched a specialized arbitration and mediation practice, building on Consultant Zekry's experience as Head of the Cassation Prosecution in Kuwait and his membership in the Investment Dispute Settlement Committee."
+        },
+        "item2": {
+          "year": "2019",
+          "title": "Consumer Protection & IP Practice",
+          "description": "Expanded services to include a dedicated consumer protection and intellectual property practice led by Hassan Zekry, drawing on his experience at the Ministry of Trade and Industry."
+        },
+        "item3": {
+          "year": "2023",
+          "title": "Growth & Digital Transformation",
+          "description": "Reached 500+ successful cases and 200+ satisfied clients, serving individuals and corporations across Egypt with integrated legal, Sharia, arbitration, and mediation services."
+        }
+      }
+    },
+    "coreValues": {
+      "title": "Our Core Values",
+      "values": {
+        "justice": "Justice",
+        "trust": "Trust",
+        "expertise": "Expertise",
+        "integrity": "Integrity"
+      }
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We are here to provide legal support and representation at the highest standards of professionalism and integrity."
+    },
+    "info": {
+      "title": "Contact Information",
+      "mainOffice": "Main Office — Giza",
+      "mainOfficeAddress": "22 Nadi El Seid St. (Shooting Club St.), Dokki,<br></br>In front of the main gate of Nadi El Seid Club,<br></br>3rd Floor, Giza, Egypt",
+      "alexBranch": "Alexandria Branch",
+      "alexBranchAddress": "6 Al Ghorfa Al Togaria St. (formerly Said I),<br></br>El Mansheya, 1st Floor,<br></br>Alexandria, Egypt",
+      "phones": "Phone Numbers",
+      "email": "Email"
+    },
+    "map": {
+      "open": "Open in Google Maps"
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email Address",
+      "emailPlaceholder": "example@mail.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help you?",
+      "message": "Message",
+      "messagePlaceholder": "Write the details of your inquiry here...",
+      "submit": "Send Request",
+      "alertSent": "Your request has been sent!"
+    }
+  },
+  "ExpertisePage": {
+    "hero": {
+      "subtitle": "Our Expertise",
+      "title": "Areas of Expertise & Legal Recognition",
+      "description": "Comprehensive legal support rooted in deep judicial experience — helping individuals and corporations navigate complex court procedures and regulatory frameworks with confidence."
+    },
+    "practiceAreas": {
+      "subtitle": "Practice Areas",
+      "title": "Comprehensive Coverage for All Legal Needs",
+      "description": "We provide specialized legal advisory built on decades of judicial experience — from criminal defense and corporate formation to arbitration and judgment enforcement.",
+      "consultBtn": "Consult Now",
+      "items": {
+        "criminal": {
+          "title": "Criminal & Misdemeanor Cases",
+          "description": "Defense and representation before investigation authorities, public prosecution, and criminal courts across all Egyptian jurisdictions. Leveraging decades of judicial experience at the highest levels of Egyptian criminal courts."
+        },
+        "civil": {
+          "title": "Civil Cases",
+          "description": "Handling civil disputes, compensation claims, tort liability, and contract enforcement. Representing clients in all Egyptian civil courts from courts of first instance through the Court of Cassation."
+        },
+        "family": {
+          "title": "Personal Status & Family Law",
+          "description": "Specialist representation in family law matters including alimony, custody, visitation, divorce, Khul', and inheritance under Egyptian personal status law — handled with legal precision and human sensitivity."
+        },
+        "corporate": {
+          "title": "Company Formation & Corporate Law",
+          "description": "Establishing all types of companies under Egyptian law — from LLCs and joint-stock companies to sole proprietorships and partnerships. Includes drafting partnership agreements, articles of association, and obtaining all required licenses."
+        },
+        "consumer": {
+          "title": "Consumer Protection & Commercial Fraud",
+          "description": "Legal representation in consumer protection disputes and commercial fraud violations before the Consumer Protection Authority (CPA) and Egyptian courts. Expertise rooted in direct experience at the CPA's Car Complaints Department."
+        },
+        "ip": {
+          "title": "Intellectual Property & Trademarks",
+          "description": "Trademark registration, IP rights enforcement, anti-counterfeiting investigations, and protection of creative and commercial rights under Egyptian Law No. 82 of 2002 and international IP conventions."
+        },
+        "arbitration": {
+          "title": "Arbitration & Dispute Resolution",
+          "description": "Legal arbitration, mediation, amicable settlements, and negotiation for commercial, civil, and investment disputes. Experience encompassing the Investment Contract Dispute Settlement Committee (Council of Ministers) and the Media Free Zone."
+        },
+        "consult": {
+          "title": "Legal Consultations",
+          "description": "Comprehensive legal feasibility studies, case analysis, and preparation of legal memoranda and opinions. Enabling clients — individuals and companies — to understand their legal position before taking action."
+        }
+      }
+    },
+    "recognition": {
+      "subtitle": "Our Track Record",
+      "title": "Recognition & Milestones",
+      "description": "Over 15 years of judicial-caliber legal service, recognized by Egyptian official bodies and measured in the outcomes we deliver for our clients.",
+      "stats": {
+        "years": "Years of Excellence",
+        "cases": "Cases Resolved",
+        "clients": "Satisfied Clients",
+        "partners": "Legal Partners"
+      },
+      "milestones": {
+        "m1": {
+          "year": "2023",
+          "title": "500+ Successful Cases",
+          "description": "Reached a milestone of 500+ successful cases and 200+ satisfied clients, serving across Egypt with integrated legal and arbitration services."
+        },
+        "m2": {
+          "year": "2015",
+          "title": "Arbitration Practice Expansion",
+          "description": "Expanded into international arbitration, leveraging Consultant Zekry's experience as former Head of the Cassation Prosecution in Kuwait."
+        },
+        "m3": {
+          "year": "2010",
+          "title": "Foundation & Launch",
+          "description": "Founded by Chencoller Mohamed Zekry, former President of the Cairo Economic Court, with a commitment to judicial integrity and client-centric legal solutions."
+        }
+      }
+    },
+    "sectors": {
+      "title": "Sectors We Specialize In",
+      "description": "We possess deep knowledge and extensive practical experience across Egypt's key legal sectors.",
+      "items": {
+        "consumer": {
+          "title": "Consumer Protection & Anti-Fraud",
+          "description": "Expert legal support in consumer rights enforcement, commercial fraud investigations, and trademark protection cases."
+        },
+        "realestate": {
+          "title": "Real Estate & Property",
+          "description": "Legal advisory for real estate acquisitions, construction projects, property title disputes, and registration enforcement."
+        },
+        "family": {
+          "title": "Family Law & Personal Status",
+          "description": "Specialist legal advice on family law, divorce, inheritance, child custody, and personal status matters under Egyptian law."
+        },
+        "contract": {
+          "title": "Contract Drafting & Enforcement",
+          "description": "Drafting, reviewing, and enforcing commercial, civil, and investment contracts — including judgment enforcement proceedings."
+        }
+      }
+    }
+  },
+  "NewsPage": {
+    "title": "News and Legal Updates",
+    "description": "Stay informed with the latest legal developments in the region and the news of Al Zekry Law Firm and Legal Consultations.",
+    "filters": {
+      "all": "All News",
+      "corporate": "Corporate Law",
+      "updates": "Legal Updates",
+      "litigation": "Litigation",
+      "firm": "Firm News"
+    },
+    "emptyState": "No articles found matching your criteria.",
+    "readMore": "Read More"
+  },
+  "PeoplePage": {
+    "title": "Our Legal Team",
+    "description": "We are proud of an elite group of specialized legal competencies committed to providing the highest standards of quality and professionalism to our clients.",
+    "filters": {
+      "all": "All",
+      "litigation": "Litigation",
+      "corporate": "Corporate Law",
+      "arbitration": "Arbitration",
+      "ip": "Intellectual Property",
+      "realestate": "Real Estate"
+    },
+    "cta": {
+      "title": "Looking for a specific specialization?",
+      "description": "Our team of experts is ready to assist you across various legal disciplines. We are here to protect your rights and interests.",
+      "btnContact": "Book Your Consultation Now",
+      "btnServices": "Learn About Our Services"
+    }
+  },
+  "NewsArticlePage": {
+    "sections": {
+      "whatYouLearn": "What You Will Learn",
+      "agenda": "Event Agenda",
+      "speakers": "Featured Speakers",
+      "backLink": "Back to Latest News"
+    },
+    "sidebar": {
+      "eventDetails": "Event Details",
+      "date": "Date",
+      "time": "Time",
+      "location": "Location",
+      "fee": "Registration Fee",
+      "registerBtn": "Register for Event",
+      "needHelp": "Need Assistance?"
+    },
+    "fallbackSidebar": {
+      "title": "Need Legal Strategy for Your Business?",
+      "description": "Our specialized consultants are ready to protect your commercial interests and manage risk effectively.",
+      "btn": "Request Consultation"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "news": "News & Updates"
+    },
+    "articles": {
+      "honors-for-excellence-family-law": {
+        "body": [
+          "Al Zekry Law Firm is proud to announce that it has received an official honor from the Egyptian Lawyers Syndicate in recognition of its effective and outstanding efforts in handling complex family law cases, including custody, alimony, divorce, and personal status matters.",
+          "The firm's dedicated family law practice, led by Dr. Ahmed Mohamed Zekry, has consistently achieved results that protect the rights and dignity of clients across all stages of litigation — from initial negotiations to final court rulings."
+        ],
+        "learnings": [
+          "Al Zekry's family law team specializes in divorce, Khul', custody, and alimony proceedings.",
+          "The firm represents clients in all Egyptian personal status courts and appeals courts.",
+          "Our approach combines judicial experience with a deep sensitivity to the human dimensions of family disputes."
+        ]
+      },
+      "honors-real-estate-registry": {
+        "body": [
+          "Al Zekry Law Firm has been formally recognized by the Real Estate Registry Office for its pivotal role in resolving complex real estate registration disputes and property litigation cases across Egypt.",
+          "The firm's expertise in navigating Egypt's property registration framework — including title disputes, inheritance-related property division, and contract enforcement — has made it a trusted partner for both individual property owners and corporate developers."
+        ],
+        "learnings": [
+          "Al Zekry handles all aspects of real estate litigation, from registry disputes to construction contract enforcement.",
+          "The firm advises on property acquisition, due diligence, and dispute resolution for developers and investors.",
+          "Recognition from official government bodies reflects the firm's standing within Egypt's legal ecosystem."
+        ]
+      },
+      "international-contract-drafting-training": {
+        "body": [
+          "In a continued commitment to professional excellence and international best practices, consultants from Al Zekry Law Firm successfully completed an advanced training program in International Contract Drafting at the American University.",
+          "The training covered cross-border commercial agreements, arbitration clauses, force majeure provisions, and international enforcement of contracts under Egyptian and international law frameworks.",
+          "This investment in professional development reinforces the firm's ability to serve clients with international business interests and cross-border commercial transactions."
+        ],
+        "learnings": [
+          "International contract drafting — covering CISG, ICC rules, and Egyptian Commercial Code provisions.",
+          "Arbitration clause design and enforcement strategies under New York Convention rules.",
+          "Force majeure and hardship provisions in post-pandemic commercial contracts.",
+          "Cross-border enforcement of judgments and arbitral awards in Egypt."
+        ]
+      },
+      "ip-diploma-completion": {
+        "body": [
+          "Al Zekry Law Firm is pleased to announce that key consultants have successfully obtained a Diploma in Intellectual Property Law, further strengthening the firm's capacity to handle trademark registration, IP rights enforcement, and anti-counterfeiting cases.",
+          "The diploma program, conducted through a recognized Egyptian legal education institution, covered trademark law, copyright protection, patent registration, and digital IP rights under both Egyptian and international frameworks.",
+          "Hassan Mohamed Zekry, who leads the firm's IP practice, brings expertise that spans trademark registration enforcement, anti-fraud investigations, and commercial crime defense — all now further enriched by this formal qualification."
+        ],
+        "learnings": [
+          "Trademark registration procedures in Egypt under Law No. 82 of 2002.",
+          "Enforcement mechanisms for IP rights — from administrative complaints to criminal prosecution.",
+          "Digital IP challenges: protecting rights in online environments and AI-generated content.",
+          "Anti-counterfeiting investigations and coordination with Consumer Protection authorities."
+        ]
+      },
+      "annual-legal-symposium-2024": {
+        "body": [
+          "Al Zekry Law Firm for Law, Mediation, and Arbitration is proud to host its Annual Legal Symposium in Giza, bringing together legal professionals, business executives, and government officials for a focused discussion on Egypt's evolving legal landscape.",
+          "This year's symposium will cover three core themes: the latest developments in Egyptian arbitration law, consumer protection enforcement, and the new company formation procedures under Egyptian law."
+        ],
+        "learnings": [
+          "Recent reforms to Egypt's Arbitration Law No. 27 of 1994 and their practical implications.",
+          "Consumer Protection Agency (CPA) enforcement priorities and how businesses can stay compliant.",
+          "Step-by-step guide to forming companies under the Egyptian Investment Law and Companies Law.",
+          "Practical strategies for resolving commercial disputes out of court through mediation."
+        ],
+        "agenda": [
+          {
+            "time": "09:00 – 10:30 AM",
+            "session": "Session 1: Egyptian Arbitration Law Updates",
+            "description": "An in-depth review of recent reforms and landmark arbitral awards impacting commercial parties in Egypt."
+          },
+          {
+            "time": "11:00 – 12:30 PM",
+            "session": "Session 2: Consumer Protection & Commercial Fraud",
+            "description": "How businesses can ensure compliance with Egypt's Consumer Protection Law and avoid regulatory penalties."
+          },
+          {
+            "time": "02:00 – 03:30 PM",
+            "session": "Session 3: Company Formation & Corporate Governance",
+            "description": "Practical guidance on forming all company types under Egyptian law, including licensing, partnerships, and JSCs."
+          }
+        ],
+        "speakers": [
+          {
+            "name": "Chencoller Mohamed Zekry",
+            "role": "Founder & Head of the Firm"
+          },
+          {
+            "name": "Ali Mohamed Zekry",
+            "role": "Senior  · Corporate & Consumer Law"
+          }
+        ],
+        "eventLocation": "Al Zekry Law Firm – Dokki, Giza, Egypt",
+        "eventPrice": "Free"
+      },
+      "consumer-protection-law-changes": {
+        "body": [
+          "Egypt's Consumer Protection Authority (CPA) has issued new enforcement guidelines affecting businesses across retail, automotive, and digital services sectors. The changes impose stricter documentation requirements and accelerated complaint-response timelines.",
+          " Ali Mohamed Zekry, former Deputy Director of the Car Complaints Department at the CPA, breaks down what these changes mean for businesses and how to ensure full compliance."
+        ],
+        "learnings": [
+          "Understanding the scope of the new consumer complaint response requirements.",
+          "How the CPA's enforcement priorities have shifted toward e-commerce and digital services.",
+          "Documentation companies must maintain to defend against consumer protection claims.",
+          "How commercial fraud investigations are initiated and how businesses can respond."
+        ]
+      }
+    }
+  },
+  "PersonProfilePage": {
+    "stats": {
+      "yearsExp": "Years Exp.",
+      "casesWon": "Cases Won"
+    },
+    "contact": {
+      "directEmail": "Direct Email",
+      "barAdmissions": "Bar Admissions"
+    },
+    "sections": {
+      "journey": "Professional Journey",
+      "specialties": "Specialized Fields & Notable Cases",
+      "education": "Education & Honors"
+    },
+    "meeting": {
+      "title": "Schedule a Meeting",
+      "description": "Book a confidential consultation session with {name}.",
+      "btn": "Request Appointment"
+    },
+    "backLink": "Back to Our People",
+    "profiles": {
+      "founder-al-zekry": {
+        "badge": "Founding Partner",
+        "name": "Chencoller Mohamed Zekry",
+        "quote": "\"Justice is the foundation of a stable society.\"",
+        "bio": [
+          "Chencoller Mohamed Zekry is the founder and head of Al Zekry Law Firm for Law, Mediation, and Arbitration (House of Expertise – Egypt). He is a former President of the Cairo Economic Court, bringing decades of distinguished judicial service across Egypt and Kuwait to the firm.",
+          "His unparalleled judicial background provides the firm with deep institutional knowledge of court procedures and rulings, enabling precise, expedient legal strategy for clients across civil, commercial, criminal, and investment matters."
+        ],
+        "directEmail": "alzekrylawfirm@gmail.com",
+        "barAdmissions": "Cairo Court of Appeal, Court of Cassation, Kuwait Cassation Prosecution",
+        "journey": [
+          {
+            "period": "PRESENT",
+            "title": "Founder & Managing Partner",
+            "org": "Al Zekry Law Firm for Law, Mediation & Arbitration",
+            "description": "Founded and leads the firm in Dokki, Giza, providing integrated legal, Sharia, arbitration, and mediation services for individuals and corporations."
+          },
+          {
+            "period": "FORMER",
+            "title": "Head of Cassation Prosecution",
+            "org": "State of Kuwait",
+            "description": "Served as Head of the Cassation Prosecution in the State of Kuwait, handling high-level judicial matters under Kuwaiti law."
+          },
+          {
+            "period": "FORMER",
+            "title": "President – Cairo Economic Court",
+            "org": "Egyptian Judiciary",
+            "description": "Presided over the Cairo Economic Court, adjudicating complex commercial and economic disputes of national significance."
+          },
+          {
+            "period": "FORMER",
+            "title": "Head of Improvement & Follow-up Committee",
+            "org": "Cairo Court of Appeal",
+            "description": "Led the Improvement and Follow-up Committee at the Cairo Court of Appeal, overseeing judicial quality and procedural compliance."
+          },
+          {
+            "period": "FORMER",
+            "title": "Head – Commercial & Economic Group",
+            "org": "Prosecution of Cassation",
+            "description": "Led the Commercial and Economic Group at the Cassation Prosecution, handling landmark economic cases."
+          },
+          {
+            "period": "FORMER",
+            "title": "Head – Criminal, Cases & Investment Circuit",
+            "org": "Mansoura Court of Appeal",
+            "description": "Presided over the Criminal, Cases, and Investment circuit at the Mansoura Court of Appeal."
+          },
+          {
+            "period": "FORMER",
+            "title": "President – Commercial Circuit (Arbitration Nullifications)",
+            "org": "Cairo Court of Appeal",
+            "description": "Presided over the Commercial Circuit at the Cairo Court of Appeal (North Branch), exclusively handling lawsuits for the nullification of arbitration awards."
+          },
+          {
+            "period": "FORMER",
+            "title": "President – Commercial & Civil Contracts Circuit",
+            "org": "Cairo Court",
+            "description": "Presided over the Commercial and Civil Contracts Circuit at the Cairo Court."
+          },
+          {
+            "period": "FORMER",
+            "title": "Member – Commercial & Civil Circuit",
+            "org": "Cassation Prosecution",
+            "description": "Delegated to the Commercial and Civil Cassation Prosecution for seven consecutive years."
+          },
+          {
+            "period": "FORMER",
+            "title": "President – Bulaq al-Dakrour Misdemeanors Court",
+            "org": "Egyptian Judiciary",
+            "description": "Presided over the Bulaq al-Dakrour Partial Misdemeanors Court for two consecutive years."
+          },
+          {
+            "period": "FORMER",
+            "title": "Director & Judge – Saff Prosecution & Giza Full Court",
+            "org": "Egyptian Judiciary",
+            "description": "Served as Director of the Saff Prosecution and subsequently as a Judge at the Giza Full Court."
+          },
+          {
+            "period": "FORMER",
+            "title": "Public Prosecutor – Giza Full Prosecutions",
+            "org": "Public Prosecution",
+            "description": "Appointed as Public Prosecutor for the Giza Full Prosecutions in March 1976."
+          }
+        ],
+        "specialties": [
+          {
+            "title": "Criminal Defense",
+            "description": "Extensive experience in high-profile criminal defense, leveraging decades of prosecutorial insight."
+          },
+          {
+            "title": "Commercial & Economic Litigation",
+            "description": "Former President of the Cairo Economic Court; deep expertise in resolving complex commercial disputes."
+          },
+          {
+            "title": "Arbitration & Mediation",
+            "description": "Head of the Disciplinary Committee at the Media Free Zone for dispute resolution; extensive arbitration experience."
+          },
+          {
+            "title": "Investment Law",
+            "description": "Member of the Technical Secretariat for the Investment Contract Dispute Settlement Committee (Council of Ministers)."
+          }
+        ],
+        "education": [
+          {
+            "degree": "Bachelor of Laws (1975)",
+            "institution": "Ain Shams University – Faculty of Law"
+          },
+          {
+            "degree": "Lecturer – National Center for Social & Criminological Research",
+            "institution": "National Center for Social & Criminological Research"
+          },
+          {
+            "degree": "Lecturer – Center for Judicial Studies",
+            "institution": "State of Kuwait"
+          },
+          {
+            "degree": "Lecturer in Pleadings Law",
+            "institution": "Ain Shams University – Faculty of Law"
+          },
+          {
+            "degree": "Lecturer – Center for Legal Research & Consultations",
+            "institution": "Cairo University – Faculty of Law"
+          },
+          {
+            "degree": "Lecturer – Center for Legal Transactions for Domestic & International Trade",
+            "institution": "Cairo University – Faculty of Law"
+          },
+          {
+            "degree": "Member – Egyptian Society of International Law",
+            "institution": "Egyptian Society of International Law"
+          },
+          {
+            "degree": "Member – Egyptian Society for Political Economy, Statistics & Legislation",
+            "institution": "Egyptian Society for Political Economy"
+          },
+          {
+            "degree": "Member – Technical Secretariat, Investment Dispute Settlement Committee",
+            "institution": "Council of Ministers, Egypt"
+          }
+        ]
+      },
+      "ali-zekry": {
+        "badge": "Senior ",
+        "name": "Ali Mohamed Zekry",
+        "quote": "\"Strong legal foundations protect every enterprise.\"",
+        "bio": [
+          "Ali Mohamed Zekry brings over 18 years of specialized experience in corporate law, company formation, consumer protection, and commercial fraud. He combines deep regulatory knowledge with practical advisory services for businesses of all sizes.",
+          "He previously served as Deputy Director of the Car Complaints Department at the Consumer Protection Agency (CPA), giving him unmatched insight into consumer law and enforcement mechanisms."
+        ],
+        "directEmail": "alzekrylawfirm@gmail.com",
+        "barAdmissions": "Egyptian Bar Association",
+        "journey": [
+          {
+            "period": "PRESENT",
+            "title": "Senior – Corporate & Consumer Law",
+            "org": "Al Zekry Law Firm",
+            "description": "Advising clients on company formation, commercial compliance, and consumer protection matters."
+          },
+          {
+            "period": "FORMER",
+            "title": "Deputy Director – Car Complaints Department",
+            "org": "Consumer Protection Agency (CPA)",
+            "description": "Managed consumer complaints related to automobiles, overseeing dispute resolution and regulatory enforcement in coordination with manufacturers and dealers."
+          }
+        ],
+        "specialties": [
+          {
+            "title": "Company Formation",
+            "description": "Expert in forming all types of companies under Egyptian law, from LLCs to joint-stock companies."
+          },
+          {
+            "title": "Consumer Protection",
+            "description": "Deep expertise in Egyptian consumer protection regulations, enforcement, and dispute resolution."
+          },
+          {
+            "title": "Commercial Fraud",
+            "description": "Experienced in identifying, investigating, and litigating cases of commercial fraud."
+          },
+          {
+            "title": "Corporate Compliance",
+            "description": "Advising companies on regulatory compliance, corporate governance, and statutory obligations."
+          }
+        ],
+        "education": [
+          {
+            "degree": "Training – Diplomatic Corps & International Relations",
+            "institution": "Specialized Diplomatic Training Program"
+          },
+          {
+            "degree": "Training – International Economics",
+            "institution": "International Economics Program"
+          },
+          {
+            "degree": "Training – Corporate Law",
+            "institution": "Corporate Law Development Program"
+          }
+        ]
+      },
+      "omar-zekry": {
+        "badge": "Legal ",
+        "name": " Omar Alzekry",
+        "quote": "\"The law must protect the innocent and hold the guilty accountable.\"",
+        "bio": [
+          " Omar Alzekry is a distinguished legal  with advanced academic credentials in criminal law. He serves as a lawyer at the Central Administration for Legal Affairs, bringing both scholarly rigor and practical litigation experience to the firm.",
+          "His doctoral-level expertise in criminal law makes him the firm's leading authority on criminal defense, prosecution analysis, and forensic legal strategy."
+        ],
+        "directEmail": "alzekrylawfirm@gmail.com",
+        "barAdmissions": "Egyptian Bar Association, Central Administration for Legal Affairs",
+        "journey": [
+          {
+            "period": "PRESENT",
+            "title": "Legal  – Criminal Law",
+            "org": "Al Zekry Law Firm",
+            "description": "Providing specialized criminal law advisory and litigation services to the firm's clients."
+          },
+          {
+            "period": "PRESENT",
+            "title": "Lawyer – Central Administration for Legal Affairs",
+            "org": "Central Administration for Legal Affairs, Egypt",
+            "description": "Handling legal affairs and litigation for the central administration, covering a wide range of criminal and civil matters."
+          }
+        ],
+        "specialties": [
+          {
+            "title": "Criminal Defense",
+            "description": "Advanced expertise in criminal defense strategy, leveraging doctoral research in criminal law."
+          },
+          {
+            "title": "Criminal Prosecution Analysis",
+            "description": "Deep understanding of prosecution tactics, enabling highly effective defense strategies."
+          },
+          {
+            "title": "Administrative Law",
+            "description": "Experienced in legal affairs at the Central Administration, covering regulatory and administrative disputes."
+          },
+          {
+            "title": "Legal Research & Academic Advisory",
+            "description": "Provides evidence-based, academically grounded legal opinions drawing from doctoral-level criminal law research."
+          }
+        ],
+        "education": [
+          {
+            "degree": "Doctorate (Ph.D.) in Criminal Law",
+            "institution": "Egyptian University – Faculty of Law"
+          },
+          {
+            "degree": "Master's Degree in Criminal Law",
+            "institution": "Egyptian University – Faculty of Law"
+          }
+        ]
+      },
+      "hassan-zekry": {
+        "badge": "Consultant",
+        "name": "Hassan Mohamed Zekry",
+        "quote": "\"Protecting rights is the cornerstone of every just society.\"",
+        "bio": [
+          "Hassan Mohamed Zekry specializes in consumer protection, anti-fraud measures, and trademark law. He previously served as a member of the Technical Office of the Minister of Trade and Industry, giving him insider knowledge of Egypt's regulatory and commercial enforcement landscape.",
+          "His unique academic background, including a Master's in Law and an international diploma from China, reflects his commitment to a globally informed approach to legal practice."
+        ],
+        "directEmail": "alzekrylawfirm@gmail.com",
+        "barAdmissions": "Egyptian Bar Association",
+        "journey": [
+          {
+            "period": "PRESENT",
+            "title": "Consumer Protection & Trademark",
+            "org": "Al Zekry Law Firm",
+            "description": "Representing clients in consumer protection disputes, anti-fraud cases, and trademark registration and enforcement matters."
+          },
+          {
+            "period": "FORMER",
+            "title": "Member – Technical Office of the Minister",
+            "org": "Ministry of Trade and Industry, Egypt",
+            "description": "Served in the Technical Office of the Minister of Trade and Industry, advising on regulatory, commercial, and trade enforcement matters."
+          }
+        ],
+        "specialties": [
+          {
+            "title": "Consumer Protection",
+            "description": "Experienced in Egyptian consumer protection law, enforcement procedures, and dispute resolution."
+          },
+          {
+            "title": "Anti-Fraud & Commercial Crime",
+            "description": "Specializes in detecting and litigating commercial fraud, counterfeiting, and anti-competitive practices."
+          },
+          {
+            "title": "Trademark & IP Law",
+            "description": "Expertise in trademark registration, enforcement, and intellectual property protection under Egyptian and international law."
+          },
+          {
+            "title": "Trade & Commercial Regulation",
+            "description": "Deep knowledge of Egypt's trade regulations, gained from direct advisory experience at the Ministry of Trade and Industry."
+          }
+        ],
+        "education": [
+          {
+            "degree": "Master's Degree in Law",
+            "institution": "Egyptian University – Faculty of Law"
+          },
+          {
+            "degree": "Diploma in Economic Development",
+            "institution": "Peking University, China"
+          }
+        ]
+      },
+      "dr-ahmed-zekry": {
+        "badge": "",
+        "name": "Ahmed Mohamed Zekry",
+        "quote": "\"Every dispute carries a human story that deserves to be heard.\"",
+        "bio": [
+          "Ahmed Mohamed Zekry is a highly experienced litigator specializing in civil, commercial, and criminal litigation. He has particular expertise in family law, inheritance, and personal status cases, areas that require both legal precision and deep human sensitivity.",
+          "His comprehensive litigation background across multiple branches of Egyptian law makes him a versatile and trusted advocate for clients facing complex legal challenges."
+        ],
+        "directEmail": "alzekrylawfirm@gmail.com",
+        "barAdmissions": "Egyptian Bar Association",
+        "journey": [
+          {
+            "period": "PRESENT",
+            "title": "Civil, Commercial & Family Law",
+            "org": "Al Zekry Law Firm",
+            "description": "Handling civil, commercial, and criminal litigation as well as family law and inheritance disputes for individual and corporate clients."
+          }
+        ],
+        "specialties": [
+          {
+            "title": "Civil Litigation",
+            "description": "Expert in civil disputes, contracts, and civil liability claims across all Egyptian courts."
+          },
+          {
+            "title": "Commercial Litigation",
+            "description": "Represents businesses in commercial disputes, contract enforcement, and debt recovery."
+          },
+          {
+            "title": "Family Law & Personal Status",
+            "description": "Specialist in family law, divorce, custody, inheritance, and personal status cases under Egyptian law."
+          },
+          {
+            "title": "Criminal Litigation",
+            "description": "Experienced in criminal defense and prosecution across a wide range of criminal matters."
+          }
+        ],
+        "education": [
+          {
+            "degree": "Doctorate (Ph.D.) in Law",
+            "institution": "Egyptian University – Faculty of Law"
+          }
+        ]
+      }
+    }
+  },
+  "TestimonialsPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "testimonials": "Testimonials"
+    },
+    "hero": {
+      "subtitle": "Client Stories",
+      "title": "Wall of Love & Appreciation",
+      "description": "Real testimonials from companies and individuals who achieved success alongside Al Zekry Law Firm."
+    },
+    "stats": {
+      "s1": "Happy Clients",
+      "s2": "Years of Excellence",
+      "s3": "Client Satisfaction"
+    },
+    "featured": {
+      "badge": "✦ Featured Testimonial",
+      "quote": "Working with Al Zekry Law Firm was a turning point. They transformed routine legal processes into strategic opportunities for our international arbitration cases. Their responsiveness and international integration were beyond any standard.",
+      "author": "Abdullah Al Mansour",
+      "role": "CEO – Al Mansour International Group"
+    },
+    "items": {
+      "t1": {
+        "quote": "They helped us in the most difficult situations, navigating the complexities with professionalism and dedication. I highly recommend Al Zekry to anyone looking for a reliable legal partner.",
+        "author": "Mohamed Bin Zayed",
+        "role": "Real Estate Developer"
+      },
+      "t2": {
+        "quote": "Al Zekry stood by us with their exceptional legal expertise, handling over 45 cases for us in less than a year, effectively serving and protecting our investors.",
+        "author": "Nilly Hadi",
+        "role": "Investment Group CEO"
+      },
+      "t3": {
+        "quote": "Excellent results in every case. Their team is always available, and each outcome exceeded our expectations from both a legal and strategic perspective.",
+        "author": "Saleh Al Zahrani",
+        "role": "Managing Partner"
+      },
+      "t4": {
+        "quote": "They assisted us with one of our most complex financial cases, and their performance was exemplary. They handled everything with the highest professionalism and clarity.",
+        "author": "Doha Al Jasem",
+        "role": "CFO – Private Sector"
+      },
+      "t5": {
+        "quote": "The attention to detail and the quality of legal advice we received from Al Zekry cannot be matched. Every case is treated with the same level of care and strategy.",
+        "author": "Fahad Al Omari",
+        "role": "Family Business Owner"
+      }
+    },
+    "cta": {
+      "subtitle": "Share Your Story",
+      "title": "Is your story a success? Tell us about it!",
+      "btn": "Share Your Experience"
+    }
+  },
+  "ValuesPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "values": "Values & Principles"
+    },
+    "hero": {
+      "subtitle": "Our Foundation",
+      "title": "Pillars of Our Legal Practice",
+      "description": "At Al Zekry, our values are not aspirations — they are the lived principles that guide our every decision, relationship, and legal strategy."
+    },
+    "values": {
+      "v1": {
+        "title": "Integrity",
+        "description": "We uphold the highest ethical standards and work transparently with every client, ensuring trust forms the foundation of every engagement."
+      },
+      "v2": {
+        "title": "Excellence",
+        "description": "We pursue the highest quality in our legal output — delivering precise, sophisticated, and strategically sound solutions in every case."
+      },
+      "v3": {
+        "title": "Innovation",
+        "description": "We combine deep legal expertise with forward-thinking frameworks, developing creative legal strategies for complex, evolving challenges."
+      },
+      "v4": {
+        "title": "Client-Centricity",
+        "description": "Our clients are our priority. We listen, understand, and tailor our approach to serve each client's specific goals and circumstances."
+      }
+    },
+    "commitments": {
+      "title": "Our Commitment to You",
+      "c1": {
+        "title": "Prompt Response",
+        "description": "We acknowledge every inquiry within 24 hours and provide a clear action plan from the very first consultation."
+      },
+      "c2": {
+        "title": "Full Responsiveness",
+        "description": "We maintain open and continuous communication with clients throughout every stage of their matter."
+      },
+      "c3": {
+        "title": "Consistent Outcomes",
+        "description": "We build long-term relationships anchored in consistent, predictable, and excellent legal results."
+      }
+    },
+    "founder": {
+      "quote": "\"Justice is not just a profession — it is the passion that drives us to excellence in every case we take.\"",
+      "name": "Counselor Al Zekry",
+      "title": "Founding Partner"
+    }
+  }
+}

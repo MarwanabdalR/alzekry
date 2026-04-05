@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { NEWS_ARTICLES } from "@/lib/news";
+import { useTranslations } from "next-intl";
 
 const TAG_COLORS: Record<string, string> = {
   REGULATORY: "text-[#1A7A43]",
@@ -13,6 +14,8 @@ const TAG_COLORS: Record<string, string> = {
 };
 
 export default function NewsUpdates() {
+  const t = useTranslations("NewsUpdates");
+
   return (
     <section className="bg-white py-16 px-6 lg:px-12">
       <div className="container mx-auto max-w-6xl">
@@ -25,7 +28,7 @@ export default function NewsUpdates() {
             transition={{ duration: 0.6 }}
             className="text-2xl sm:text-3xl font-bold text-[#0f172a]"
           >
-            News & Legal Updates
+            {t("title")}
           </motion.h2>
           <motion.div
             initial={{ opacity: 0 }}
@@ -37,7 +40,7 @@ export default function NewsUpdates() {
               href="/news"
               className="inline-flex items-center gap-1.5 text-[#1A7A43] text-sm font-semibold hover:underline"
             >
-              See All News
+              {t("seeAllBtn")}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -73,22 +76,22 @@ export default function NewsUpdates() {
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-3">
                   <span className={`text-[11px] font-extrabold tracking-widest uppercase ${TAG_COLORS[item.tag] ?? "text-[#1A7A43]"}`}>
-                    {item.tag}
+                    {t(`items.${item.slug}.tag`)}
                   </span>
                   <span className="text-gray-300 text-xs">·</span>
-                  <span className="text-[11px] text-[#94a3b8] font-medium">{item.date}</span>
+                  <span className="text-[11px] text-[#94a3b8] font-medium">{t(`items.${item.slug}.date`)}</span>
                 </div>
                 <h3 className="text-[15px] font-bold text-[#0f172a] leading-snug mb-2">
-                  {item.title}
+                  {t(`items.${item.slug}.title`)}
                 </h3>
                 <p className="text-[13px] text-[#64748b] leading-relaxed flex-1 mb-4">
-                  {item.excerptShort}
+                  {t(`items.${item.slug}.excerptShort`)}
                 </p>
                 <Link
                   href={`/news/${item.slug}`}
                   className="inline-flex items-center gap-1 text-[#1A7A43] text-[13px] font-semibold hover:underline"
                 >
-                  Read More
+                  {t("readMoreBtn")}
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />

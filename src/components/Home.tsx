@@ -1,8 +1,12 @@
 
 "use client";
 import { motion } from "framer-motion";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Home");
+
     return (
         <div className="relative min-h-screen bg-black overflow-hidden">
       {/* City Background Layer */}
@@ -30,9 +34,9 @@ export default function Home() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="mx-auto max-w-5xl text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[90px] lg:leading-[1.1]"
+          className="mx-auto max-w-5xl text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[70px] lg:leading-[1.1]"
         >
-          Tradition of Excellence
+          {t("title")}
         </motion.h1>
 
         <motion.p
@@ -41,7 +45,7 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-3xl text-lg sm:text-xl text-gray-200 font-light tracking-wide leading-relaxed"
         >
-          Experience the pinnacle of legal expertise and dedication. Protecting your rights with integrity and unparalleled professional wisdom.
+          {t("description")}
         </motion.p>
         
         <motion.div 
@@ -50,18 +54,18 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
         >
-          <a
+          <Link
             href="/expertise"
             className="inline-flex items-center justify-center rounded-md bg-[#1A7A43] px-8 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-[#146336] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A7A43]"
           >
-            Explore Our Expertise
-          </a>
-          <a
+            {t("exploreBtn")}
+          </Link>
+          <Link
             href="/contact"
             className="inline-flex items-center justify-center rounded-md border border-white/30 bg-black/40 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Consultation
-          </a>
+            {t("consultationBtn")}
+          </Link>
         </motion.div>
       </div>
     </div>

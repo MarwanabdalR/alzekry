@@ -1,37 +1,36 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-const PEOPLE = [
+const PEOPLE_KEYS = [
   {
-    name: "Sarah Ahmed",
-    title: "Senior Partner · Corporate",
-    image: "/people/sarah-ahmed.jpg",
-    slug: "sarah-ahmed",
+    key: "ali",
+    image: "/people/AliAlzekry-removebg-preview.png",
+    slug: "ali-zekry",
   },
   {
-    name: "Omar Al Farsi",
-    title: "Head of Litigation",
-    image: "/people/omar-alfarsi.jpg",
-    slug: "omar-al-farsi",
+    key: "hassan",
+    image: "/people/HassanAlzekry.png",
+    slug: "hassan-zekry",
   },
   {
-    name: "Dr. Khalid Mansour",
-    title: "Arbitration Specialist",
-    image: "/people/khalid-mansour.jpg",
-    slug: "dr-khalid-mansour",
+    key: "ahmed",
+    image: "/people/ahmedAlzekry-removebg-preview.png",
+    slug: "dr-ahmed-zekry",
   },
   {
-    name: "Leila Hassan",
-    title: "Associate · Intellectual Property",
-    image: "/people/leila-hassan.jpg",
-    slug: "leila-hassan",
+    key: "omar",
+    image: "/people/OmarAlzekry.png",
+    slug: "omar-zekry",
   },
 ];
 
 export default function OurPeople() {
+  const t = useTranslations("OurPeople");
+
   return (
     <section className="bg-[#f8f9fa] py-16 px-6 lg:px-12">
       <div className="container mx-auto max-w-6xl">
@@ -45,7 +44,7 @@ export default function OurPeople() {
               transition={{ duration: 0.6 }}
               className="text-2xl sm:text-3xl font-bold text-[#0f172a] mb-1"
             >
-              Our People
+              {t("title")}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -54,7 +53,7 @@ export default function OurPeople() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-[#64748b] text-sm"
             >
-              Meet the legal minds dedicated to your success.
+              {t("subtitle")}
             </motion.p>
           </div>
           <motion.div
@@ -67,7 +66,7 @@ export default function OurPeople() {
               href="/people"
               className="inline-flex items-center gap-1.5 text-[#1A7A43] text-sm font-semibold hover:underline"
             >
-              View All Partners
+              {t("viewAllBtn")}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -78,9 +77,9 @@ export default function OurPeople() {
 
         {/* People Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
-          {PEOPLE.map((person, index) => (
+          {PEOPLE_KEYS.map((person, index) => (
             <motion.div
-              key={person.name}
+              key={person.key}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -89,22 +88,22 @@ export default function OurPeople() {
             >
               <Link href={`/people/${person.slug}`} className="group flex flex-col">
                 {/* Photo */}
-                <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-200 mb-3 shadow-sm group-hover:shadow-md transition-shadow">
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-[#122229] mb-3 shadow-sm group-hover:shadow-md transition-shadow">
+                  {/* Fallback placeholder (z-0) */}
+                  <div className="absolute inset-0 bg-[#122229] flex items-center justify-center text-slate-500 text-xs z-0">
+                    {t("photoFallback")}
+                  </div>
+                  {/* Image (z-10 to stay on top) */}
                   <Image
                     src={person.image}
-                    alt={person.name}
+                    alt={t(`members.${person.key}.name`)}
                     fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                    unoptimized
+                    className="object-cover object-top z-10 group-hover:scale-105 transition-transform duration-300"
                   />
-                  {/* Fallback placeholder */}
-                  <div className="absolute inset-0 bg-slate-300 flex items-center justify-center text-slate-500 text-xs z-0">
-                    Photo
-                  </div>
                 </div>
                 {/* Info */}
-                <h3 className="text-[15px] font-bold text-[#0f172a] group-hover:text-[#1A7A43] transition-colors">{person.name}</h3>
-                <p className="text-[13px] text-[#1A7A43] font-medium mt-0.5">{person.title}</p>
+                <h3 className="text-[15px] font-bold text-[#0f172a] group-hover:text-[#1A7A43] transition-colors">{t(`members.${person.key}.name`)}</h3>
+                <p className="text-[13px] text-[#1A7A43] font-medium mt-0.5">{t(`members.${person.key}.title`)}</p>
               </Link>
             </motion.div>
           ))}

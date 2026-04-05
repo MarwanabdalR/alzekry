@@ -1,5 +1,5 @@
 // src/lib/people.ts
-// Central data store for all people profiles
+// Central data store for all people profiles – updated with real firm data
 
 export type JourneyItem = {
   period: string;
@@ -35,355 +35,465 @@ export type Person = {
   journey: JourneyItem[];
   specialties: SpecialtyCard[];
   education: EducationItem[];
+  linkedinUrl: string;
 };
 
 export const PEOPLE: Person[] = [
   {
     slug: "founder-al-zekry",
     badge: "Founding Partner",
-    name: "Counselor Al Zekry",
-    title: "Founding Partner & Senior Counsel",
+    name: "Consultant Mohamed Zekry",
+    title: "Founder & Head of the Firm",
     quote: '"Justice is the foundation of a stable society."',
     bio: [
-      "With over two and a half decades of legal excellence, Counselor Al Zekry has established a reputation for uncompromising integrity and sophisticated legal strategy. He leads the firm's major litigation and international arbitration teams, representing both high-net-worth individuals and multinational corporations in the Middle East.",
-      "His approach combines deep-rooted local knowledge with international legal standards, ensuring that clients receive world-class representation across multiple jurisdictions.",
+      "Consultant Mohamed Zekry is the founder and head of Al Zekry Law Firm for Law, Mediation, and Arbitration (House of Expertise – Egypt). He is a former President of the Cairo Economic Court, bringing decades of distinguished judicial service across Egypt and Kuwait to the firm.",
+      "His unparalleled judicial background provides the firm with deep institutional knowledge of court procedures and rulings, enabling precise, expedient legal strategy for clients across civil, commercial, criminal, and investment matters.",
     ],
-    directEmail: "counselor@alzekry.law",
-    barAdmissions: "Supreme Court, International Arbitration Board",
-    image: "/people/founder.jpg",
-    yearsExp: "25+",
-    casesWon: "500+",
+    directEmail: "alzekrylawfirm@gmail.com",
+    barAdmissions: "Cairo Court of Appeal, Court of Cassation, Kuwait Cassation Prosecution",
+    image: "/people/MohammedAlzekry-removebg-preview.png",
+    yearsExp: "25",
+    casesWon: "500",
+    linkedinUrl: "https://www.linkedin.com/in/mohamed-zekry-b371153b8?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
     journey: [
       {
-        period: "2010 – PRESENT",
+        period: "PRESENT",
         title: "Founder & Managing Partner",
-        org: "Al Zekry Law Firm",
+        org: "Al Zekry Law Firm for Law, Mediation & Arbitration",
         description:
-          "Leading Al Zekry Law Firm to become a top-tier regional powerhouse in corporate and civil law.",
+          "Founded and leads the firm in Dokki, Giza, providing integrated legal, Sharia, arbitration, and mediation services for individuals and corporations.",
       },
       {
-        period: "2000 – 2009",
-        title: "Senior Legal Consultant",
-        org: "Ministry of Justice",
+        period: "FORMER",
+        title: "Head of Cassation Prosecution",
+        org: "State of Kuwait",
         description:
-          "Advisor to the Ministry of Justice on legislative reforms and public policy implementation.",
+          "Served as Head of the Cassation Prosecution in the State of Kuwait, handling high-level judicial matters under Kuwaiti law.",
       },
       {
-        period: "1998 – 2000",
-        title: "Appellate Attorney",
-        org: "Regional Courts",
+        period: "FORMER",
+        title: "President – Cairo Economic Court",
+        org: "Egyptian Judiciary",
         description:
-          "Specialized in high-stakes appeals cases within the regional courts of appeal.",
+          "Presided over the Cairo Economic Court, adjudicating complex commercial and economic disputes of national significance.",
+      },
+      {
+        period: "FORMER",
+        title: "Head of Improvement & Follow-up Committee",
+        org: "Cairo Court of Appeal",
+        description:
+          "Led the Improvement and Follow-up Committee at the Cairo Court of Appeal, overseeing judicial quality and procedural compliance.",
+      },
+      {
+        period: "FORMER",
+        title: "Head – Commercial & Economic Group",
+        org: "Prosecution of Cassation",
+        description:
+          "Led the Commercial and Economic Group at the Cassation Prosecution, handling landmark economic cases.",
+      },
+      {
+        period: "FORMER",
+        title: "Head – Criminal, Cases & Investment Circuit",
+        org: "Mansoura Court of Appeal",
+        description:
+          "Presided over the Criminal, Cases, and Investment circuit at the Mansoura Court of Appeal.",
+      },
+      {
+        period: "FORMER",
+        title: "President – Commercial Circuit (Arbitration Nullifications)",
+        org: "Cairo Court of Appeal",
+        description:
+          "Presided over the Commercial Circuit at the Cairo Court of Appeal (North Branch), exclusively handling lawsuits for the nullification of arbitration awards.",
+      },
+      {
+        period: "FORMER",
+        title: "President – Commercial & Civil Contracts Circuit",
+        org: "Cairo Court",
+        description:
+          "Presided over the Commercial and Civil Contracts Circuit at the Cairo Court.",
+      },
+      {
+        period: "FORMER",
+        title: "Member – Commercial & Civil Circuit",
+        org: "Cassation Prosecution",
+        description:
+          "Delegated to the Commercial and Civil Cassation Prosecution for seven consecutive years.",
+      },
+      {
+        period: "FORMER",
+        title: "President – Bulaq al-Dakrour Misdemeanors Court",
+        org: "Egyptian Judiciary",
+        description:
+          "Presided over the Bulaq al-Dakrour Partial Misdemeanors Court for two consecutive years.",
+      },
+      {
+        period: "FORMER",
+        title: "Director & Judge – Saff Prosecution & Giza Full Court",
+        org: "Egyptian Judiciary",
+        description:
+          "Served as Director of the Saff Prosecution and subsequently as a Judge at the Giza Full Court.",
+      },
+
+      {
+        period: "FORMER",
+        title: "Public Prosecutor – Giza Full Prosecutions",
+        org: "Public Prosecution",
+        description:
+          "Appointed as Public Prosecutor for the Giza Full Prosecutions in March 1976.",
       },
     ],
     specialties: [
       {
-        title: "Corporate & Mergers",
+        title: "Criminal Defense",
         description:
-          "Handled a $45M acquisition of a regional energy firm, navigating complex cross-border regulatory frameworks.",
-        icon: "🏢",
+          "Extensive experience in high-profile criminal defense, leveraging decades of prosecutorial insight.",
+        icon: "FaGavel",
       },
       {
-        title: "International Arbitration",
+        title: "Commercial & Economic Litigation",
         description:
-          "Successfully represented a sovereign entity in a multi-billion dollar treaty dispute at the ICC.",
-        icon: "⚖️",
+          "Former President of the Cairo Economic Court; deep expertise in resolving complex commercial disputes.",
+        icon: "FaBuilding",
       },
       {
-        title: "Commercial Real Estate",
+        title: "Arbitration & Mediation",
         description:
-          "Legal lead for the development of a major residential and commercial hub spanning over 2 million sqm.",
-        icon: "🏗️",
+          "Head of the Disciplinary Committee at the Media Free Zone for dispute resolution; extensive arbitration experience.",
+        icon: "FaHandshake",
       },
       {
-        title: "Private Wealth Defense",
+        title: "Investment Law",
         description:
-          "Structural legal planning for family offices, ensuring multi-generational asset protection and compliance.",
-        icon: "🛡️",
+          "Member of the Technical Secretariat for the Investment Contract Dispute Settlement Committee (Council of Ministers).",
+        icon: "FaChartLine",
       },
     ],
     education: [
       {
-        degree: "LL.M. in International Law",
-        institution: "University of London, UK",
+        degree: "Bachelor of Laws (1975)",
+        institution: "Ain Shams University – Faculty of Law",
         type: "degree",
       },
       {
-        degree: "Bachelor of Laws (Honors)",
-        institution: "Cairo University, Faculty of Law",
-        type: "degree",
-      },
-      {
-        degree: "CIArb Fellow",
-        institution: "Chartered Institute of Arbitrators",
+        degree: "Lecturer – National Center for Social & Criminological Research",
+        institution: "National Center for Social & Criminological Research",
         type: "fellowship",
       },
       {
-        degree: "Legal Excellence Award",
-        institution: "Middle East Legal Awards 2022",
+        degree: "Lecturer – Center for Judicial Studies",
+        institution: "State of Kuwait",
+        type: "fellowship",
+      },
+      {
+        degree: "Lecturer in Pleadings Law",
+        institution: "Ain Shams University – Faculty of Law",
+        type: "fellowship",
+      },
+      {
+        degree: "Lecturer – Center for Legal Research & Consultations",
+        institution: "Cairo University – Faculty of Law",
+        type: "fellowship",
+      },
+      {
+        degree: "Lecturer – Center for Legal Transactions for Domestic & International Trade",
+        institution: "Cairo University – Faculty of Law",
+        type: "fellowship",
+      },
+      {
+        degree: "Member – Egyptian Society of International Law",
+        institution: "Egyptian Society of International Law",
+        type: "fellowship",
+      },
+      {
+        degree: "Member – Egyptian Society for Political Economy, Statistics & Legislation",
+        institution: "Egyptian Society for Political Economy",
+        type: "fellowship",
+      },
+      {
+        degree: "Member – Technical Secretariat, Investment Dispute Settlement Committee",
+        institution: "Council of Ministers, Egypt",
         type: "award",
       },
     ],
   },
   {
-    slug: "sarah-ahmed",
-    badge: "Senior Partner",
-    name: "Sarah Ahmed",
-    title: "Senior Partner · Corporate",
-    quote: '"Strong contracts are the pillars of lasting business."',
+    slug: "ali-zekry",
+    badge: "Senior ",
+    name: " Ali Mohamed Zekry",
+    title: "Senior  · Corporate & Consumer Law",
+    quote: '"Strong legal foundations protect every enterprise."',
     bio: [
-      "Sarah Ahmed brings over 15 years of experience in corporate law, specializing in mergers, acquisitions, and regulatory compliance for leading regional enterprises.",
-      "She is recognized for her meticulous approach to drafting complex commercial agreements and her strategic counsel to C-suite executives across the GCC.",
+      " Ali Mohamed Zekry brings over 18 years of specialized experience in corporate law, company formation, consumer protection, and commercial fraud. He combines deep regulatory knowledge with practical advisory services for businesses of all sizes.",
+      "He previously served as Deputy Director of the Car Complaints Department at the Consumer Protection Agency (CPA), giving him unmatched insight into consumer law and enforcement mechanisms.",
     ],
-    directEmail: "sarah.ahmed@alzekry.law",
-    barAdmissions: "Saudi Bar Association, Dubai International Arbitration Centre",
-    image: "/people/sarah-ahmed.jpg",
-    yearsExp: "15+",
-    casesWon: "200+",
+    directEmail: "alzekrylawfirm@gmail.com",
+    barAdmissions: "Egyptian Bar Association",
+    image: "/people/AliAlzekry-removebg-preview.png",
+    yearsExp: "18",
+    casesWon: "200",
+    linkedinUrl: "https://www.linkedin.com/in/ali-zekry-14ba633a1?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
     journey: [
       {
-        period: "2018 – PRESENT",
-        title: "Senior Partner – Corporate",
+        period: "PRESENT",
+        title: "Senior  – Corporate & Consumer Law",
         org: "Al Zekry Law Firm",
-        description: "Leading the corporate practice group with a focus on M&A and regulatory matters.",
+        description:
+          "Advising clients on company formation, commercial compliance, and consumer protection matters.",
       },
       {
-        period: "2012 – 2018",
-        title: "Associate – Corporate Law",
-        org: "Al Zekry Law Firm",
-        description: "Advising on complex commercial transactions and cross-border joint ventures.",
-      },
-      {
-        period: "2009 – 2012",
-        title: "Legal Counsel",
-        org: "National Commercial Bank",
-        description: "In-house counsel responsible for banking contracts and regulatory compliance.",
+        period: "FORMER",
+        title: "Deputy Director – Car Complaints Department",
+        org: "Consumer Protection Agency (CPA)",
+        description:
+          "Managed consumer complaints related to automobiles, overseeing dispute resolution and regulatory enforcement in coordination with manufacturers and dealers.",
       },
     ],
     specialties: [
       {
-        title: "Mergers & Acquisitions",
-        description: "Structured and closed over 30 M&A transactions valued at more than $2 billion in aggregate.",
-        icon: "🤝",
+        title: "Company Formation",
+        description:
+          "Expert in forming all types of companies under Egyptian law, from LLCs to joint-stock companies.",
+        icon: "FaIndustry",
       },
       {
-        title: "Regulatory Compliance",
-        description: "Advising multinational clients on GCC regulatory requirements and licensing frameworks.",
-        icon: "📋",
+        title: "Consumer Protection",
+        description:
+          "Deep expertise in Egyptian consumer protection regulations, enforcement, and dispute resolution.",
+        icon: "FaShieldAlt",
       },
       {
-        title: "Joint Ventures",
-        description: "Drafted and negotiated JV agreements for cross-border collaborations in logistics and energy.",
-        icon: "🌐",
+        title: "Commercial Fraud",
+        description:
+          "Experienced in identifying, investigating, and litigating cases of commercial fraud.",
+        icon: "FaSearch",
       },
       {
-        title: "Board Advisory",
-        description: "Serving as external legal advisor to board committees on governance and fiduciary duties.",
-        icon: "🏛️",
+        title: "Corporate Compliance",
+        description:
+          "Advising companies on regulatory compliance, corporate governance, and statutory obligations.",
+        icon: "FaClipboardList",
       },
     ],
     education: [
       {
-        degree: "LL.M. in Corporate Law",
-        institution: "King's College London, UK",
+        degree: "Training – Diplomatic Corps & International Relations",
+        institution: "Specialized Diplomatic Training Program",
         type: "degree",
       },
       {
-        degree: "Bachelor of Laws",
-        institution: "King Abdulaziz University",
+        degree: "Training – International Economics",
+        institution: "International Economics Program",
         type: "degree",
       },
       {
-        degree: "Rising Star Award",
-        institution: "Arab Legal Excellence Awards 2020",
-        type: "award",
+        degree: "Training – Corporate Law",
+        institution: "Corporate Law Development Program",
+        type: "degree",
       },
     ],
   },
   {
-    slug: "omar-al-farsi",
-    badge: "Head of Litigation",
-    name: "Omar Al Farsi",
-    title: "Head of Litigation",
-    quote: '"In the courtroom, preparation is everything."',
+    slug: "hassan-zekry",
+    badge: "",
+    name: " Hassan Mohamed Zekry",
+    title: " · Consumer Protection & Trademark Law",
+    quote: '"Protecting rights is the cornerstone of every just society."',
     bio: [
-      "Omar Al Farsi leads the firm's litigation practice with unmatched courtroom presence and strategic case management across civil, commercial, and criminal jurisdictions.",
-      "He has represented clients in landmark cases before the Supreme Court and has a track record of successful verdicts in high-stakes commercial disputes.",
+      " Hassan Mohamed Zekry specializes in consumer protection, anti-fraud measures, and trademark law. He previously served as a member of the Technical Office of the Minister of Trade and Industry, giving him insider knowledge of Egypt's regulatory and commercial enforcement landscape.",
+      "His unique academic background, including a Master's in Law and an international diploma from China, reflects his commitment to a globally informed approach to legal practice.",
     ],
-    directEmail: "omar.alfarsi@alzekry.law",
-    barAdmissions: "Supreme Court, Courts of Appeal",
-    image: "/people/omar-alfarsi.jpg",
-    yearsExp: "18+",
-    casesWon: "350+",
+    directEmail: "alzekrylawfirm@gmail.com",
+    barAdmissions: "Egyptian Bar Association",
+    image: "/people/HassanAlzekry.png",
+    yearsExp: "10",
+    casesWon: "120",
+    linkedinUrl: "https://www.linkedin.com/in/hassan-zekry-270033186?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
     journey: [
       {
-        period: "2015 – PRESENT",
-        title: "Head of Litigation",
+        period: "PRESENT",
+        title: " – Consumer Protection & Trademark",
         org: "Al Zekry Law Firm",
-        description: "Overseeing all contentious matters and managing a team of 12 litigation attorneys.",
+        description:
+          "Representing clients in consumer protection disputes, anti-fraud cases, and trademark registration and enforcement matters.",
       },
       {
-        period: "2008 – 2015",
-        title: "Senior Litigator",
-        org: "Al Zekry Law Firm",
-        description: "Handling major commercial disputes, labor cases, and real estate litigation.",
-      },
-      {
-        period: "2005 – 2008",
-        title: "Public Prosecutor",
-        org: "Public Prosecution Office",
-        description: "Prosecuted complex criminal cases with a high conviction rate in first-degree courts.",
+        period: "FORMER",
+        title: "Member – Technical Office of the Minister",
+        org: "Ministry of Trade and Industry, Egypt",
+        description:
+          "Served in the Technical Office of the Minister of Trade and Industry, advising on regulatory, commercial, and trade enforcement matters.",
       },
     ],
     specialties: [
+      {
+        title: "Consumer Protection",
+        description:
+          "Experienced in Egyptian consumer protection law, enforcement procedures, and dispute resolution.",
+        icon: "FaShieldAlt",
+      },
+      {
+        title: "Anti-Fraud & Commercial Crime",
+        description:
+          "Specializes in detecting and litigating commercial fraud, counterfeiting, and anti-competitive practices.",
+        icon: "FaSearch",
+      },
+      {
+        title: "Trademark & IP Law",
+        description:
+          "Expertise in trademark registration, enforcement, and intellectual property protection under Egyptian and international law.",
+        icon: "FaTrademark",
+      },
+      {
+        title: "Trade & Commercial Regulation",
+        description:
+          "Deep knowledge of Egypt's trade regulations, gained from direct advisory experience at the Ministry of Trade and Industry.",
+        icon: "FaBox",
+      },
+    ],
+    education: [
+      {
+        degree: "Master's Degree in Law",
+        institution: "Egyptian University – Faculty of Law",
+        type: "degree",
+      },
+      {
+        degree: "Diploma in Economic Development",
+        institution: "Peking University, China",
+        type: "degree",
+      },
+    ],
+  },
+  {
+    slug: "dr-ahmed-zekry",
+    badge: "",
+    name: " Dr. Ahmed Mohamed Zekry",
+    title: " · Civil, Commercial & Family Law",
+    quote: '"Every dispute carries a human story that deserves to be heard."',
+    bio: [
+      " Dr. Ahmed Mohamed Zekry is a highly experienced litigator specializing in civil, commercial, and criminal litigation. He has particular expertise in family law, inheritance, and personal status cases, areas that require both legal precision and deep human sensitivity.",
+      "His comprehensive litigation background across multiple branches of Egyptian law makes him a versatile and trusted advocate for clients facing complex legal challenges.",
+    ],
+    directEmail: "alzekrylawfirm@gmail.com",
+    barAdmissions: "Egyptian Bar Association",
+    image: "/people/ahmedAlzekry-removebg-preview.png",
+    yearsExp: "12",
+    casesWon: "180",
+    linkedinUrl: "https://www.linkedin.com/in/ahmed-zekry-219875400?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    journey: [
+      {
+        period: "PRESENT",
+        title: " – Civil, Commercial & Family Law",
+        org: "Al Zekry Law Firm",
+        description:
+          "Handling civil, commercial, and criminal litigation as well as family law and inheritance disputes for individual and corporate clients.",
+      },
+    ],
+    specialties: [
+      {
+        title: "Civil Litigation",
+        description:
+          "Expert in civil disputes, contracts, and civil liability claims across all Egyptian courts.",
+        icon: "FaFileContract",
+      },
       {
         title: "Commercial Litigation",
-        description: "Secured favorable judgments in disputes worth over SAR 500 million for corporate clients.",
-        icon: "⚖️",
+        description:
+          "Represents businesses in commercial disputes, contract enforcement, and debt recovery.",
+        icon: "FaBuilding",
       },
       {
-        title: "Labor Disputes",
-        description: "Successfully defended and represented clients in hundreds of labor tribunal hearings.",
-        icon: "👥",
+        title: "Family Law & Personal Status",
+        description:
+          "Specialist in family law, divorce, custody, inheritance, and personal status cases under Egyptian law.",
+        icon: "FaUsers",
       },
+      {
+        title: "Criminal Litigation",
+        description:
+          "Experienced in criminal defense and prosecution across a wide range of criminal matters.",
+        icon: "FaGavel",
+      },
+    ],
+    education: [
+      {
+        degree: "Doctorate (Ph.D.) in Law",
+        institution: "Egyptian University – Faculty of Law",
+        type: "degree",
+      },
+    ],
+  },
+  {
+    slug: "omar-zekry",
+    badge: "Legal ",
+    name: " Omar Alzekry",
+    title: "Legal  · Criminal Law",
+    quote: '"The law must protect the innocent and hold the guilty accountable."',
+    bio: [
+      " Omar Alzekry is a distinguished legal  with advanced academic credentials in criminal law. He serves as a lawyer at the Central Administration for Legal Affairs, bringing both scholarly rigor and practical litigation experience to the firm.",
+      "His doctoral-level expertise in criminal law makes him the firm's leading authority on criminal defense, prosecution analysis, and forensic legal strategy.",
+    ],
+    directEmail: "alzekrylawfirm@gmail.com",
+    barAdmissions: "Egyptian Bar Association, Central Administration for Legal Affairs",
+    image: "/people/OmarAlzekry.png",
+    yearsExp: "10",
+    casesWon: "150",
+    linkedinUrl: "https://www.linkedin.com/in/omar-zekry-ba20922ab?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    journey: [
+      {
+        period: "PRESENT",
+        title: "Legal  – Criminal Law",
+        org: "Al Zekry Law Firm",
+        description:
+          "Providing specialized criminal law advisory and litigation services to the firm's clients.",
+      },
+      {
+        period: "PRESENT",
+        title: "Lawyer – Central Administration for Legal Affairs",
+        org: "Central Administration for Legal Affairs, Egypt",
+        description:
+          "Handling legal affairs and litigation for the central administration, covering a wide range of criminal and civil matters.",
+      },
+    ],
+    specialties: [
       {
         title: "Criminal Defense",
-        description: "High-profile acquittals in white-collar crime and financial fraud cases.",
-        icon: "🔒",
+        description:
+          "Advanced expertise in criminal defense strategy, leveraging doctoral research in criminal law.",
+        icon: "FaBalanceScale",
       },
       {
-        title: "Enforcement of Judgments",
-        description: "Expert in enforcing foreign judgments and arbitral awards within Saudi Arabia.",
-        icon: "📜",
+        title: "Criminal Prosecution Analysis",
+        description:
+          "Deep understanding of prosecution tactics, enabling highly effective defense strategies.",
+        icon: "FaLock",
+      },
+      {
+        title: "Administrative Law",
+        description:
+          "Experienced in legal affairs at the Central Administration, covering regulatory and administrative disputes.",
+        icon: "FaLandmark",
+      },
+      {
+        title: "Legal Research & Academic Advisory",
+        description:
+          "Provides evidence-based, academically grounded legal opinions drawing from doctoral-level criminal law research.",
+        icon: "FaBookOpen",
       },
     ],
     education: [
-      { degree: "Bachelor of Laws", institution: "King Saud University", type: "degree" },
-      { degree: "Diploma in Criminal Law", institution: "Institute of Public Administration", type: "degree" },
-      { degree: "Best Litigator Award", institution: "Saudi Legal Forum 2021", type: "award" },
+      {
+        degree: "Doctorate (Ph.D.) in Criminal Law",
+        institution: "Egyptian University – Faculty of Law",
+        type: "degree",
+      },
+      {
+        degree: "Master's Degree in Criminal Law",
+        institution: "Egyptian University – Faculty of Law",
+        type: "degree",
+      },
     ],
   },
-  {
-    slug: "dr-khalid-mansour",
-    badge: "Arbitration Specialist",
-    name: "Dr. Khalid Mansour",
-    title: "Arbitration Specialist",
-    quote: '"Disputes resolved today preserve partnerships tomorrow."',
-    bio: [
-      "Dr. Khalid Mansour is the firm's leading authority on international commercial arbitration and alternative dispute resolution, with over two decades of experience handling complex cross-border disputes.",
-      "He has acted as arbitrator, counsel, and expert witness in proceedings before major arbitral institutions including the ICC, LCIA, and DIAC.",
-    ],
-    directEmail: "khalid.mansour@alzekry.law",
-    barAdmissions: "ICC Court of Arbitration, LCIA, DIAC",
-    image: "/people/khalid-mansour.jpg",
-    yearsExp: "20+",
-    casesWon: "280+",
-    journey: [
-      {
-        period: "2013 – PRESENT",
-        title: "Arbitration Specialist",
-        org: "Al Zekry Law Firm",
-        description: "Leading the firm's ADR practice and representing clients in international arbitrations worldwide.",
-      },
-      {
-        period: "2006 – 2013",
-        title: "International Arbitration Counsel",
-        org: "Global Law Partners, London",
-        description: "Advised on treaty arbitration and investment disputes under ICSID and UNCITRAL rules.",
-      },
-      {
-        period: "2002 – 2006",
-        title: "Academic Researcher",
-        org: "Cairo University – Faculty of Law",
-        description: "Researched international arbitration frameworks and authored two published books on ADR.",
-      },
-    ],
-    specialties: [
-      {
-        title: "ICC Arbitration",
-        description: "Managed over 40 ICC proceedings as counsel and sole arbitrator with combined values exceeding $1B.",
-        icon: "🌍",
-      },
-      {
-        title: "Investment Treaty Disputes",
-        description: "Defended sovereign states and investors in BIT arbitrations under ICSID and UNCITRAL.",
-        icon: "📈",
-      },
-      {
-        title: "Construction Disputes",
-        description: "Resolved multi-jurisdictional disputes for major infrastructure and construction projects.",
-        icon: "🏗️",
-      },
-      {
-        title: "Expert Witness",
-        description: "Recognized expert witness on Saudi and Middle Eastern law in international proceedings.",
-        icon: "🧑‍⚖️",
-      },
-    ],
-    education: [
-      { degree: "Ph.D. in International Arbitration", institution: "University of Paris II", type: "degree" },
-      { degree: "LL.M. in Dispute Resolution", institution: "American University, Washington DC", type: "degree" },
-      { degree: "FCIArb", institution: "Chartered Institute of Arbitrators", type: "fellowship" },
-      { degree: "Arbitrator of the Year", institution: "Middle East Legal Awards 2023", type: "award" },
-    ],
-  },
-  {
-    slug: "leila-hassan",
-    badge: "Associate",
-    name: "Leila Hassan",
-    title: "Associate · Intellectual Property",
-    quote: '"Innovation deserves the strongest protection."',
-    bio: [
-      "Leila Hassan is a rising star in intellectual property law, advising technology companies, creative agencies, and inventors on the protection and commercialization of their intellectual assets.",
-      "She has successfully registered trademarks and patents across 15 countries and specializes in IP litigation and licensing negotiations.",
-    ],
-    directEmail: "leila.hassan@alzekry.law",
-    barAdmissions: "Saudi IP Authority, WIPO",
-    image: "/people/leila-hassan.jpg",
-    yearsExp: "8+",
-    casesWon: "90+",
-    journey: [
-      {
-        period: "2020 – PRESENT",
-        title: "Associate – Intellectual Property",
-        org: "Al Zekry Law Firm",
-        description: "Advising on trademark, copyright, patent, and trade secret matters for regional and international clients.",
-      },
-      {
-        period: "2016 – 2020",
-        title: "IP Legal Advisor",
-        org: "Saudi IP Authority",
-        description: "Managed trademark and patent filing procedures and represented the authority in dispute cases.",
-      },
-    ],
-    specialties: [
-      {
-        title: "Trademark Registration",
-        description: "Registered over 200 trademarks across 15 countries through WIPO and direct national filings.",
-        icon: "™️",
-      },
-      {
-        title: "IP Litigation",
-        description: "Represented clients in IP infringement actions, achieving injunctions and damages awards.",
-        icon: "⚖️",
-      },
-      {
-        title: "Licensing & Commercialization",
-        description: "Structured complex IP licensing agreements for SaaS platforms, media, and pharma industries.",
-        icon: "📄",
-      },
-      {
-        title: "Copyright & Digital Media",
-        description: "Advising content creators and media companies on copyright in the digital and AI content space.",
-        icon: "🎨",
-      },
-    ],
-    education: [
-      { degree: "LL.M. in Intellectual Property Law", institution: "University of Edinburgh, UK", type: "degree" },
-      { degree: "Bachelor of Laws", institution: "Princess Nourah University", type: "degree" },
-      { degree: "Emerging Talent Award", institution: "Arab Legal Excellence Awards 2022", type: "award" },
-    ],
-  },
+  
 ];
 
 export function getPersonBySlug(slug: string): Person | undefined {
